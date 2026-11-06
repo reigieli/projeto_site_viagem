@@ -17,8 +17,164 @@
 </head>
 
 <body>
+<div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-area">
+                    <div class="logo-icon">✈</div>
+                    <div>
+                        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">ROAMLY</div>
+                        <div style="font-size: 11px; color: #64748b;">Travel Planner App</div>
+                    </div>
+                </div>
+                <span style="color: #64748b; cursor: pointer;">‹</span>
+            </div>
 
-   /*CODIGO DA TELA AQUI*/
+            <nav class="sidebar-nav">
+                
+                <!-- planejamento -->
+                <div>
+                    <div class="nav-section-title">Planejamento</div>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">🌐 1. Início</a></li>
+                        <li><a href="#" class="nav-link">📅 2. Dados da Viagem</a></li>
+                        <li><a href="#" class="nav-link">✨ 3. Preferências</a></li>
+                        <li><a href="#" class="nav-link">📍 4. Sugestões Destinos</a></li>
+                    </ul>
+                </div>
 
+                <!-- reservas -->
+                <div>
+                    <div class="nav-section-title">Reservas & Seleção</div>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">✈️ 5. Pesquisa de Voos</a></li>
+                        <li><a href="#" class="nav-link">📊 6. Comparar Voos</a></li>
+                        <li><a href="#" class="nav-link">🏨 7. Hospedagem</a></li>
+                        <li><a href="#" class="nav-link">🗺️ 8. Passeios & Tours</a></li>
+                    </ul>
+                </div>
+
+                <!-- checkout -->
+                <div>
+                    <div class="nav-section-title">Checkout</div>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link active">📄 9. Resumo da Reserva</a></li>
+                        <li><a href="#" class="nav-link">👥 10. Passageiros</a></li>
+                        <li><a href="#" class="nav-link">💳 11. Pagamento</a></li>
+                        <li><a href="#" class="nav-link">✅ 12. Confirmação</a></li>
+                    </ul>
+                </div>
+
+                <!-- gestao viagem -->
+                <div>
+                    <div class="nav-section-title">Gestão da Viagem</div>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">✈ 13. Meu Roteiro</a></li>
+                        <li><a href="#" class="nav-link">💲 14. Controle Financeiro</a></li>
+                        <li><a href="#" class="nav-link">☑ 15. Checklist da Mala</a></li>
+                        <li><a href="#" class="nav-link">👤 16. Minha Conta</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="topbar">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span class="screen-indicator">Tela 9 de 16</span>
+                    <h1 style="font-size: 15px; font-weight: 600; color: #111827;">9. Resumo da Reserva</h1>
+                </div>
+                <div class="topbar-actions">
+                    <button class="btn-nav">← Anterior</button>
+                    <button class="btn-nav primary">Próxima →</button>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <div class="container">
+                    
+                    <!-- título principal -->
+                    <div style="margin-bottom: 24px;">
+                        <h2 style="font-size: 24px; font-weight: 700; color: #111827;">9. Resumo do Pacote & Valores</h2>
+                        <p style="color: #6b7280; font-size: 14px;">Revise todos os itens selecionados antes de preencher os dados dos passageiros.</p>
+                    </div>
+
+                    <!-- separa os serviços do resumo financeiro -->
+                    <div class="grid-2" style="grid-template-columns: 2fr 1fr; align-items: start;">
+                        
+                        <!-- coluna da esquerda -->
+                        <div style="display: flex; flex-direction: column; gap: 16px;">
+                            
+                            <!-- card do voo -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <span style="font-weight: 600; color: #111827;">✈️ Voo Escolhido</span>
+                                    <span style="color: #0d9488; font-weight: 600;">Qatar Airways</span>
+                                </div>
+                                <p style="color: #4b5563; font-size: 14px;">São Paulo (GRU) ➔ Kathmandu (KTM) • 12 Mai - 25 Mai (2 Passageiros)</p>
+                            </div>
+
+                            <!-- card da hospedagem -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <span style="font-weight: 600; color: #111827;">🏨 Hospedagem</span>
+                                    <span style="color: #0d9488; font-weight: 600;">Himalayan Boutique Hotel</span>
+                                </div>
+                                <p style="color: #4b5563; font-size: 14px;">13 noites • Quarto Duplo Deluxe com Vista para Montanhas</p>
+                            </div>
+
+                            <!-- card dos passeios -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <span style="font-weight: 600; color: #111827;">🎟️ Passeios Incluídos</span>
+                                    <span style="color: #0d9488; font-weight: 600;">1 selecionado(s)</span>
+                                </div>
+                                <p style="color: #4b5563; font-size: 14px;">Trekking Helicóptero Everest Acampamento Base</p>
+                            </div>
+
+                        </div>
+
+                        <!-- coluna direita -->
+                        <div class="card" style="background-color: #0b132b; color: #ffffff; border: none; padding: 24px;">
+                            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 20px; border-bottom: 1px solid #1e293b; padding-bottom: 12px;">Resumo Financeiro</h3>
+                            
+                            <!-- lista dos valores -->
+                            <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: #94a3b8; margin-bottom: 24px;">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>Passagens (2x):</span>
+                                    <span style="color: #ffffff;">R$ 10.400</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>Hospedagem (13nts):</span>
+                                    <span style="color: #ffffff;">R$ 3.640</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>Passeios Adicionais:</span>
+                                    <span style="color: #ffffff;">R$ 1.450</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>Taxas de Embarque:</span>
+                                    <span style="color: #ffffff;">R$ 380</span>
+                                </div>
+                            </div>
+
+                            <!-- parte do total da viagem -->
+                            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 700; color: #10b981; border-top: 1px solid #1e293b; padding-top: 16px; margin-bottom: 24px;">
+                                <span>TOTAL DA VIAGEM:</span>
+                                <span style="font-size: 18px;">R$ 15.870</span>
+                            </div>
+
+                            <button class="btn" style="width: 100%; background-color: #0d9488; color: #ffffff; padding: 12px;">
+                                Continuar para Passageiros &gt;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
 </body>
 </html>
