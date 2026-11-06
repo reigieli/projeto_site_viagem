@@ -34,3 +34,28 @@
   border-color: #0066ff;         /*Muda a cor da borda para azul ao focar*/
   box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15);    /*Cria um brilho/sombra azul ao redor do campo*/
 }
+
+/*barra deslizante de preço*/
+.form-range {
+  width: 100%;
+  accent-color: #0d9488;                  /*Colore a bolinha e a barra deslizante com o tom do app*/
+  cursor: pointer;
+}
+
+/*alinhar caixas de seleção com texto ao lado*/
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+/*Ajustes da caixas de seleção*/
+.checkbox-group input[type="checkbox"] {
+  accent-color: #0d9488;                  /*Deixa o fundo da seleção ao clicar em verde-água*/
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}

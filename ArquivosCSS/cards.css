@@ -26,3 +26,20 @@
   align-items: center;              /*Alinha os itens verticalmente ao centro */
   margin-bottom: 12px;              /*Da um respiro (espaco) abaixo do cabecalho*/
 }
+
+/*Estilo base para os pequenos emblemas ou etiquetas nas telas*/
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/*Variação de sucesso (selos verdes de compatibilidade ou "Adicionado")*/
+.badge-success {
+  background-color: #d1fae5;              /*Fundo verde bem claro*/
+  color: #065f46;                         /*Texto verde escuro*/
+}
