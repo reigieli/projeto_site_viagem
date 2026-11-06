@@ -1,0 +1,166 @@
+/*layout geral do app*/
+
+/*coloca o menu lateral e o conteúdo lado a lado*/
+.app-layout {
+  display: flex;
+  min-height: 100vh; /*ocupa 100% da altura da tela*/
+}
+
+/*menu lateral esquerdo*/
+
+/*Caixa principal do menu lateral escuro*/
+.sidebar {
+  width: 260px;                           /*Largura fixa da barra lateral*/
+  background-color: #070d1b;              /*Cor de fundo azul bem escuro*/
+  color: #94a3b8;                         /*Cor padrão dos textos/ícones*/
+  display: flex;
+  flex-direction: column;                 /*Organiza os elementos de cima para baixo*/
+  border-right: 1px solid #1e293b;        /*Linha sutil de separação na borda direita*/
+  flex-shrink: 0;                         /*Impede que o menu encolha caso a tela seja redimensionada*/
+}
+
+/*Cabeçalho do menu lateral onde fica a logo*/
+.sidebar-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1e293b;       /*Linha divisoria abaixo da logo*/
+}
+
+/*agrupa o ícone do avião e os textos do nome do app*/
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;                              /*Espaço entre o ícone e os textos*/
+}
+
+/*Caixinha colorida da logo do aplicativo*/
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #0d9488;              /*Cor de fundo verde-água*/
+  border-radius: 8px;                     /*Cantos arredondados*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;                           /*Cor do ícone interno*/
+  font-weight: bold;
+}
+
+/*navegação interna do menu (onde ficam os links das telas)*/
+.sidebar-nav {
+  padding: 16px 12px;
+  overflow-y: auto;                       /*Permite rolar o menu caso ultrapasse o tamanho da tela*/
+  display: flex;
+  flex-direction: column;
+  gap: 24px;                              /*Espaçamento entre as seções (planejamento, reservas.....)*/
+  font-size: 13px;
+}
+
+/*títulos das categorias do menu (ex: "PLANEJAMENTO", "CHECKOUT") */
+.nav-section-title {
+  font-size: 11px;
+  text-transform: uppercase;              /*Transforma o texto em letras maiúsculas*/
+  letter-spacing: 0.5px;                  /*Espaçamento leve entre as letras*/
+  color: #64748b;                         /*Cor cinza acinzentada mais discreta*/
+  margin-bottom: 8px;
+  padding-left: 8px;
+  font-weight: 700;                       /*Texto bem destacado*/
+}
+
+/*links de cada categoria */
+.nav-list {
+  list-style: none;                       /*Remove as bolinhas padrão de listas do HTML*/
+  display: flex;
+  flex-direction: column;
+  gap: 2px;                               /*Espaçamento bem curto entre os links da lista*/
+}
+
+/*base para cada link/opção do menu*/
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;                              /*Espaço entre o emoji/ícone e o texto da tela*/
+  padding: 10px 12px;
+  color: #94a3b8;                         /*Cor do texto inativo*/
+  text-decoration: none;                  /*Remove o sublinhado padrão de links*/
+  border-radius: 6px;                     /*Arredonda os cantos ao passar o mouse*/
+  transition: background 0.2s, color 0.2s; /*Suaviza a animação de hover*/
+}
+
+/*Efeito quando o mouse passa por cima de um item do menu*/
+.nav-link:hover {
+  background-color: #1e293b;              /*Fundo levemente mais claro*/
+  color: #ffffff;                         /*Texto fica branco*/
+}
+
+/*indica em qual tela o usuário está atualmente*/
+.nav-link.active {
+  background-color: #0d9488;              /*Fundo verde-água de destaque*/
+  color: #ffffff;                         /*Texto branco*/
+  font-weight: 600;                       /*Texto em negrito*/
+}
+
+/*BARRA SUPERIOR*/
+
+/* Container que ocupa o restante da tela à direita do menu lateral */
+.main-content {
+  flex-grow: 1;                           /* Ocupa todo o espaço restante disponível */
+  display: flex;
+  flex-direction: column;
+}
+
+/* onde mostra a indicação da tela e botões de avançar*/
+.topbar {
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;         /*Joga o título para a esquerda e os botões de paginação para a direita*/
+  align-items: center;
+  background: #ffffff;                    /*Fundo branco*/
+  border-bottom: 1px solid #e5e7eb;       /*Linha divisoria inferior cinza claro*/
+}
+
+/* Etiqueta indicativa da tela atual*/
+.screen-indicator {
+  background-color: #ccfbf1;              /* Fundo verde-água bem claro */
+  color: #0f766e;                         /* Cor do texto em verde escuro */
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/*Grupo de botões de navegação do topo (Anterior / Próxima)*/
+.topbar-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/*Botões de navegação pequenos localizados no topo da página*/
+.btn-nav {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #374151;
+  text-decoration: none;
+}
+
+/* Variação primária do botão de navegação do topo (ex: botão "Próxima") */
+.btn-nav.primary {
+  background-color: #0d9488;              /* Fundo verde-água */
+  color: white;                           /* Texto branco */
+  border: none;
+}
+
+/* Espaçamento interno padrão onde o conteúdo principal de cada tela é inserido */
+.content-body {
+  padding: 32px;
+}
