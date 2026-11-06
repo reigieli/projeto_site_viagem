@@ -1,0 +1,36 @@
+/*organizacao das colunas de todas as telas*/
+
+/*centralizador principal do site*/
+.container {
+  max-width: 1200px;             /*Limita a largura maxima para o site nao esticar demais em telas gigantes*/
+  margin: 0 auto;                /*Centraliza o container horizontalmente na tela*/
+  padding: 20px;                 /*Espacamento interno seguro nas bordas*/
+}
+
+/*Grade de 2 colunas (Resumo e Pagamento, graficos financeiros)*/
+.grid-2 {
+  display: grid;                 /*Ativa o sistema de Grid do CSS*/
+  grid-template-columns: repeat(2, 1fr);     /*Divide o espaco em exatamente 2 colunas iguais*/
+  gap: 20px;                     /*Espaco de respiro entre as caixas/colunas*/
+}
+
+/*Grade de 3 colunas (dashboard de roteiro, widgets da Tela 13)*/
+.grid-3 {
+  display: grid;                 /*Ativa o sistema de Grid*/
+  grid-template-columns: repeat(3, 1fr);    /*Divide o espaco em 3 colunas iguais*/
+  gap: 20px;                     /*Espaco entre as colunas*/
+}
+
+/*Grade de 4 colunas (sugestoes de destinos, cards da home)*/
+.grid-4 {
+  display: grid;                 /*Ativa o sistema de Grid*/
+  grid-template-columns: repeat(4, 1fr);    /*Divide o espaco em 4 colunas iguais*/
+  gap: 20px;                     /*Espaco entre as colunas*/
+}
+
+/*automatico para celulares*/
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;  /*Transforma todas as grades em apenas 1 coluna empilhada no celular*/
+  }
+}

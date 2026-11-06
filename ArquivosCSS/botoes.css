@@ -1,0 +1,51 @@
+/*Botao padrao base*/
+.btn {
+  display: inline-flex;          /*Permite alinhar itens internos (como icones e textos)*/
+  align-items: center;           /*Centraliza os elementos verticalmente no botao*/
+  justify-content: center;       /*Centraliza os elementos horizontalmente no botao*/
+  padding: 10px 20px;            /*Espacamento interno: 10px em cima/baixo e 20px nas laterais*/
+  font-size: 14px;               /*Tamanho da fonte do texto do botao*/
+  font-weight: 600;              /*Deixa o texto com um peso semi-negrito*/
+  border-radius: 8px;            /*Arredonda as bordas do botao*/
+  border: none;                  /*Remove a borda padrao que vem nos botoes do navegador*/
+  cursor: pointer;               /*Muda o cursor do mouse para uma "maozinha" ao passar por cima*/
+  transition: background-color 0.2s, transform 0.1s; /*Suaviza a animacao de cor e clique*/
+  text-decoration: none;         
+}
+
+/*Efeito de "afundar" quando o usuario clica no botao*/
+.btn:active {
+  transform: scale(0.98);       
+}
+
+/*acoes principais (ex: "Avancar", "Salvar")*/
+.btn-primary {
+  background-color: #0066ff;     /*Cor de fundo azul forte*/
+  color: #ffffff;                /*Cor do texto em branco para dar contraste*/
+}
+.btn-primary:hover {
+  background-color: #0052cc;     /*Escurece o azul quando o mouse passa por cima*/
+}
+
+/*acoes neutras ("Voltar", "Cancelar")*/
+.btn-secondary {
+  background-color: #e5e7eb;     /*Cor de fundo cinza claro*/
+  color: #374151;                /*Cor do texto cinza escuro*/
+}
+.btn-secondary:hover {
+  background-color: #d1d5db;     /*Escurece o cinza quando o mouse passa por cima*/
+}
+
+/*conclusoes ("Confirmar Compra")*/
+.btn-success {
+  background-color: #10b981;     /*Cor de fundo verde*/
+  color: #ffffff;                /*Cor do texto em branco*/
+}
+.btn-success:hover {
+  background-color: #059669;     /*Escurece o verde quando o mouse passa por cima*/
+}
+
+/*Faz o botao ocupar 100% do espaco da caixas/formularios*/
+.btn-block {
+  width: 100%;
+}

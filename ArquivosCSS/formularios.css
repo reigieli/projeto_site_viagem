@@ -1,0 +1,36 @@
+/*Para inputs, labels e selects das telas de dados e pagamento*/
+
+/*empilha a etiqueta (label) em cima do campo (input)*/
+.form-group {
+  display: flex;                 /*Habilita o modelo flexbox*/
+  flex-direction: column;        /*Organiza os elementos de cima para baixo em coluna*/
+  gap: 6px;                      /*Espaco entre a label e o input*/
+  margin-bottom: 16px;           /*Espaco vazio abaixo de cada campo do formulario*/
+}
+
+/*Etiqueta/Nome do campo ("Nome Completo", "Data de Ida")*/
+.form-label {
+  font-size: 13px;               /*Tamanho pequeno e legivel para o texto da label*/
+  font-weight: 600;              /*Deixa o texto semi-negrito*/
+  color: #4b5563;                /*Cor cinza escuro para nao ficar pesado visualmente*/
+}
+
+/*Campo de digitacao e seletores*/
+.form-input, 
+.form-select {
+  width: 100%;                   /*Faz o campo ocupar toda a largura disponivel da caixa*/
+  padding: 10px 14px;            /*Espacamento interno para o texto nao colar nas bordas*/
+  border: 1px solid #d1d5db;     /*Borda cinza padrao do campo*/
+  border-radius: 8px;            /*Arredonda os cantos do campo*/
+  font-size: 14px;               /*Tamanho da fonte digitada pelo usuario*/
+  outline: none;                 /*Remove a borda azul padrao feia do navegador ao focar*/
+  background-color: #ffffff;     /*Fundo branco dentro do campo*/
+  transition: border-color 0.2s, box-shadow 0.2s;   /*Suaviza a transicao quando o usuario clicar no campo*/
+}
+
+/*Efeito quando o usuario clica para digitar em um input ou select*/
+.form-input:focus, 
+.form-select:focus {
+  border-color: #0066ff;         /*Muda a cor da borda para azul ao focar*/
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15);    /*Cria um brilho/sombra azul ao redor do campo*/
+}

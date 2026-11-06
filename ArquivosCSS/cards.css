@@ -1,0 +1,28 @@
+/*Para as caixinhas, hoteis, voos, destinos e widgets*/
+
+/*estrutura basica de qualquer bloco visual do site*/
+.card {
+  background: #ffffff;           /*Cor de fundo branca para destacar o card*/
+  border-radius: 12px;           /*Arredonda as pontas do card*/
+  padding: 20px;                 /*Espacamento interno em todas as direcoes*/
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);    /*efeito de profundidade*/
+  border: 1px solid #e5e7eb;     /*Borda fina e cinza claro para delimitar o card*/
+}
+
+/*Efeito para cards interativos (hoteis ou voos em que pode clicar)*/
+.card-interactive {
+  cursor: pointer;               /*Muda o cursor para a "maozinha"*/
+  transition: transform 0.2s, box-shadow 0.2s;  /*Suaviza a animacao de movimento e sombra*/
+}
+.card-interactive:hover {
+  transform: translateY(-3px);   /*Move o card levemente para cima ao passar o mouse*/
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);   /*Aumenta a sombra dando destaque ao card*/
+}
+
+/*Cabecalho interno do card (titulo de um lado e botao do outro)*/
+.card-header {
+  display: flex;                    /*Coloca os itens internos lado a lado*/
+  justify-content: space-between;   /*Joga um item totalmente para a esquerda e outro para a direita*/
+  align-items: center;              /*Alinha os itens verticalmente ao centro */
+  margin-bottom: 12px;              /*Da um respiro (espaco) abaixo do cabecalho*/
+}
