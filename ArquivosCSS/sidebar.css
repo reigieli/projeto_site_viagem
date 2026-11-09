@@ -21,11 +21,16 @@
 
 /*Cabeçalho do menu lateral onde fica a logo*/
 .sidebar-header {
-  padding: 20px;
+  height: 72px;
+  padding: 0 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #1e293b;       /*Linha divisoria abaixo da logo*/
+}
+
+.logo-img {
+  width: 160px;
+  height: auto;
 }
 
 /*agrupa o ícone do avião e os textos do nome do app*/
@@ -163,4 +168,15 @@
 /* Espaçamento interno padrão onde o conteúdo principal de cada tela é inserido */
 .content-body {
   padding: 32px;
+}
+
+/* o título da tela e a etiqueta indicativa (ex: "Tela 1 de 16") ficam  lado a lado*/
+.topbar__info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar__title {
+  font-size: 18px;
 }

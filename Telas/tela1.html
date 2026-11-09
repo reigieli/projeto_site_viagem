@@ -1,24 +1,194 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Planner - Inicio</title>
-  
+  <title>Travel Planner - Início</title>
+
+  <!-- Folhas de estilo da pasta ArquivosCSS -->
   <link rel="stylesheet" href="../ArquivosCSS/reset.css">
-  <link rel="stylesheet" href="../ArquivosCSS/sidebar.css">
   <link rel="stylesheet" href="../ArquivosCSS/grades.css">
+  <link rel="stylesheet" href="../ArquivosCSS/sidebar.css">
+  <link rel="stylesheet" href="../ArquivosCSS/hero.css">
+  <link rel="stylesheet" href="../ArquivosCSS/formularios.css">
   <link rel="stylesheet" href="../ArquivosCSS/botoes.css">
   <link rel="stylesheet" href="../ArquivosCSS/cards.css">
-  <link rel="stylesheet" href="../ArquivosCSS/formularios.css">
-  <link rel="stylesheet" href="../ArquivosCSS/tabelas.css">
 </head>
-
 <body>
 
-  /*CODIGO DA TELA AQUI*/
+  <div class="app-layout">
+    
+    <!-- Barra Lateral (Sidebar) -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img class="logo-img" src="../imagens/logo.png" alt="Roamly - Travel Planner App">
+        <span class="sidebar-toggle">‹</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Planejamento -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">PLANEJAMENTO</h3>
+          <ul class="nav-list">
+            <li class="active"><a href="#" class="nav-link">1. Início</a></li>
+            <a href="tela2.html" class="nav-link">2. Dados da viagem</a>
+           <a href="tela3.html" class="nav-link">3. Preferências</a>
+            <a href="tela4.html" class="nav-link">4. Sugestões Destinos</a>
+          </ul>
+        </div>
+
+        <!-- Reservas e Seleção -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">RESERVAS E SELEÇÃO</h3>
+          <ul class="nav-list">
+            <a href="tela5.html" class="nav-link">5. Pesquisa de Voos</a>
+          <a href="tela6.html" class="nav-link">6. Comparar Voos</a>
+            <a href="tela7.html" class="nav-link">7. Hospedagem</a>
+            <a href="tela8.html" class="nav-link">8. Passeios e Tours</a>
+          </ul>
+        </div>
+
+        <!-- Checkout -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">CHECKOUT</h3>
+          <ul class="nav-list">
+             <a href="tela9.html" class="nav-link">9. Resumo da Reserva</a>
+            <a href="tela10.html" class="nav-link">10. Passageiros</a>
+             <a href="tela11.html" class="nav-link">11. Pagamento</a>
+             <a href="tela12.html" class="nav-link">12. Confirmação</a>
+          </ul>
+        </div>
+
+        <!-- Gestão da Viagem -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">GESTÃO DA VIAGEM</h3>
+          <ul class="nav-list">
+            <a href="tela13.html" class="nav-link">13. Meu Roteiro</a>
+            <a href="tela14.html" class="nav-link">14. Controle Financeiro</a>
+            <a href="tela15.html" class="nav-link">15. Checklist da Mala</a>
+            <a href="tela16.html" class="nav-link">16. Minha Conta</a>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <header class="topbar">
+        <div class="topbar__info">
+          <span class="screen-indicator">Tela 1 de 16</span>
+          <h1 class="topbar__title">1. Início</h1>
+        </div>
+        <!-- CORREÇÃO 1: Classes dos botões do topo corrigidas -->
+        <div class="topbar-actions">
+          <a href="tela2.html" class="btn-nav primary">Anterior  ›</a>
+         <a href="tela1.html" class="btn-nav primary">Próxima ›</a>
+        </div>
+      </header>
+
+      <main class="content-body">
+        
+        <!-- Banner Central -->
+        <section class="hero">
+          <span class="hero__tag">EXPLORE O MUNDO</span>
+          <h2 class="hero__title">Para onde você quer ir?</h2>
+          <p class="hero__text">Descubra destinos incríveis, planeje roteiros personalizados e economize na sua próxima viagem.</p>
+
+          <!-- Barra de Pesquisa Branca Flutuante -->
+          <form class="search-bar">
+            <div class="search__field">
+              <span class="search__label">ORIGEM</span>
+              <input class="search__input" type="text" name="origem" value="São Paulo (GRU)">
+            </div>
+            
+            <div class="search__divider"></div>
+
+            <div class="search__field">
+              <span class="search__label">DESTINO</span>
+              <input class="search__input" type="text" name="destino" value="Kathmandu, Nepal">
+            </div>
+
+            <div class="search__divider"></div>
+
+            <div class="search__field">
+              <span class="search__label">DATA</span>
+              <input class="search__input" type="text" name="data" value="12 Mai - 25 Mai">
+            </div>
+
+            <button class="search__button" type="submit">
+              🔍 Buscar Agora
+            </button>
+          </form>
+        </section>
+
+        <!-- Destinos Populares -->
+        <section class="destinations">
+          <div class="destinations__header">
+            <div>
+              <h2 class="destinations__title">Destinos Populares em Alta</h2>
+              <p class="destinations__subtitle">As opções mais buscadas pelos viajantes este mês</p>
+            </div>
+            <a href="#" class="destinations__link">Ver todos ›</a>
+          </div>
+
+          <!-- CORREÇÃO 2: Adicionada a div com a classe grid-4 englobando os cards -->
+          <div class="grid-4">
+            
+            <!-- Card 1 -->
+            <article class="card card-interactive">
+              <div class="card__image-container">
+                <span class="badge">Aventura</span>
+                <img class="card__image" src="../imagens/Nepal.PNG" alt="Kathmandu, Nepal">
+              </div>
+              <div class="card__content">
+                <h3 class="card__title">Kathmandu, Nepal</h3>
+                <p class="card__price">A partir de <strong>R$ 5.200</strong></p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card card-interactive">
+              <div class="card__image-container">
+                <span class="badge">Romântico</span>
+                <img class="card__image" src="../imagens/Paris.PNG" alt="Kathmandu, Nepal">
+              </div>
+              <div class="card__content">
+                <h3 class="card__title">Paris, França</h3>
+                <p class="card__price">A partir de <strong>R$ 12.100</strong></p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card card-interactive">
+              <div class="card__image-container">
+                <span class="badge">Neve</span>
+              <img class="card__image" src="../imagens/Barioche.PNG" alt="Kathmandu, Nepal">  
+              </div>
+              <div class="card__content">
+                <h3 class="card__title">Bariloche, Argentina</h3>
+                <p class="card__price">A partir de <strong>R$ 3.400</strong></p>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card card-interactive">
+              <div class="card__image-container">
+                <span class="badge">Praia</span>
+                <img class="card__image" src="../imagens/Phuket.PNG" alt="Kathmandu, Nepal"> 
+              </div>
+              <div class="card__content">
+                <h3 class="card__title">Phuket, Tailândia</h3>
+                <p class="card__price">A partir de <strong>R$ 4.800</strong></p>
+              </div>
+            </article>
+
+            
+          </div> 
+        </section>
+
+      </main>
+    </div>
+  </div>
 
 </body>
 </html>
