@@ -17,8 +17,135 @@
 </head>
 
 <body>
+<div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-area">
+                    <div class="logo-icon">✈</div>
+                    <div>
+                        <div style="font-weight: 700; color: #ffffff; font-size: 14px;">ROAMLY</div>
+                        <div style="font-size: 11px; color: #64748b;">Travel Planner App</div>
+                    </div>
+                </div>
+                <span style="color: #64748b; cursor: pointer;">‹</span>
+            </div>
 
-  /*CODIGO DA TELA AQUI*/
+            <nav class="sidebar-nav">
+                <!-- planejamento -->
+                <div>
+                    <div class="nav-section-title">Planejamento</div>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">🌐 1. Início</a></li>
+                        <li><a href="#" class="nav-link">📅 2. Dados da Viagem</a></li>
+                        <li><a href="#" class="nav-link">✨ 3. Preferências</a></li>
+                        <li><a href="#" class="nav-link">📍 4. Sugestões Destinos</a></li>
+                    </ul>
+                </div>
 
+                <!-- reservas e selecoes -->
+                <div>
+                    <div class="nav-section-title">Reservas & Seleção</div>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">✈️ 5. Pesquisa de Voos</a></li>
+                        <li><a href="#" class="nav-link">📊 6. Comparar Voos</a></li>
+                        <li><a href="#" class="nav-link">🏨 7. Hospedagem</a></li>
+                        <li><a href="#" class="nav-link">🗺️ 8. Passeios & Tours</a></li>
+                    </ul>
+                </div>
+
+                <!-- Checkout -->
+                <div>
+                    <div class="nav-section-title">Checkout</div>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">📄 9. Resumo da Reserva</a></li>
+                        <li><a href="#" class="nav-link active">👥 10. Passageiros</a></li>
+                        <li><a href="#" class="nav-link">💳 11. Pagamento</a></li>
+                        <li><a href="#" class="nav-link">✅ 12. Confirmação</a></li>
+                    </ul>
+                </div>
+
+                <!-- gestao da viagem -->
+                <div>
+                    <div class="nav-section-title">Gestão da Viagem</div>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">✈ 13. Meu Roteiro</a></li>
+                        <li><a href="#" class="nav-link">💲 14. Controle Financeiro</a></li>
+                        <li><a href="#" class="nav-link">☑ 15. Checklist da Mala</a></li>
+                        <li><a href="#" class="nav-link">👤 16. Minha Conta</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="topbar">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span class="screen-indicator">Tela 10 de 16</span>
+                    <h1 style="font-size: 15px; font-weight: 600; color: #111827;">10. Passageiros</h1>
+                </div>
+                <div class="topbar-actions">
+                    <button class="btn-nav">← Anterior</button>
+                    <button class="btn-nav primary">Próxima →</button>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <div class="container" style="max-width: 800px;">
+                    
+                    <!-- Cabeçalho -->
+                    <div style="margin-bottom: 24px;">
+                        <span style="font-size: 12px; font-weight: 700; color: #0d9488; text-transform: uppercase; letter-spacing: 0.5px;">Identificação</span>
+                        <h2 style="font-size: 24px; font-weight: 700; color: #111827; margin-top: 4px;">10. Dados dos Passageiros</h2>
+                        <p style="color: #6b7280; font-size: 14px;">Informe os dados conforme constam no Passaporte para emissão do bilhete.</p>
+                    </div>
+
+                    <!-- Formulário -->
+                    <form style="display: flex; flex-direction: column; gap: 20px;">
+                        
+                        <!-- passageiro titular -->
+                        <div class="card">
+                            <h3 style="font-size: 13px; font-weight: 700; color: #0d9488; text-transform: uppercase; margin-bottom: 16px;">Passageiro 1 (Titular)</h3>
+                            <div class="grid-2">
+                                <div class="form-group">
+                                    <input type="text" class="form-input" value="Ashik Kumar" placeholder="Nome Completo">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-input" value="FP9823412" placeholder="Número do Passaporte">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <input type="text" class="form-input" value="14/08/1995" placeholder="Data de Nascimento">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <input type="email" class="form-input" value="ashik@travelplanner.com" placeholder="E-mail">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Passageiro 2 -->
+                        <div class="card">
+                            <h3 style="font-size: 13px; font-weight: 700; color: #374151; text-transform: uppercase; margin-bottom: 16px;">Passageiro 2</h3>
+                            <div class="grid-2">
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <input type="text" class="form-input" value="Mariana Silva" placeholder="Nome Completo">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <input type="text" class="form-input" value="FP4410923" placeholder="Número do Passaporte">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- botões de navegação inferiores -->
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+                            <a href="#" style="color: #374151; font-weight: 600; text-decoration: none; font-size: 14px;">Voltar</a>
+                            <button type="submit" class="btn" style="background-color: #0d9488; color: #ffffff;">
+                                Ir para Pagamento &rarr;
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
