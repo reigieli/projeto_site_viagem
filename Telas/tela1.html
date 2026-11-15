@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Planner - Início</title>
 
-  <!-- Folhas de estilo da pasta ArquivosCSS -->
+  <!--Ligações ao CSS -->
   <link rel="stylesheet" href="../ArquivosCSS/reset.css">
   <link rel="stylesheet" href="../ArquivosCSS/grades.css">
   <link rel="stylesheet" href="../ArquivosCSS/sidebar.css">
@@ -18,22 +18,23 @@
 
   <div class="app-layout">
     
-    <!-- Barra Lateral (Sidebar) -->
+    <!--parte do logo -->
     <aside class="sidebar">
       <div class="sidebar-header">
         <img class="logo-img" src="../imagens/logo.png" alt="Roamly - Travel Planner App">
         <span class="sidebar-toggle">‹</span>
       </div>
 
+      <!-- Menu de Navegação -->
       <nav class="sidebar-nav">
         <!-- Planejamento -->
         <div class="nav-section">
           <h3 class="nav-section-title">PLANEJAMENTO</h3>
           <ul class="nav-list">
-            <li class="active"><a href="#" class="nav-link">1. Início</a></li>
-            <a href="tela2.html" class="nav-link">2. Dados da viagem</a>
-           <a href="tela3.html" class="nav-link">3. Preferências</a>
-            <a href="tela4.html" class="nav-link">4. Sugestões Destinos</a>
+            <li class="active"><a href="#" class="nav-link">🌐1. Início</a></li>
+            <a href="tela2.html" class="nav-link">📅2. Dados da viagem</a>
+           <a href="tela3.html" class="nav-link">✨3. Preferências</a>
+            <a href="tela4.html" class="nav-link">📍4. Sugestões Destinos</a>
           </ul>
         </div>
 
@@ -41,10 +42,10 @@
         <div class="nav-section">
           <h3 class="nav-section-title">RESERVAS E SELEÇÃO</h3>
           <ul class="nav-list">
-            <a href="tela5.html" class="nav-link">5. Pesquisa de Voos</a>
-          <a href="tela6.html" class="nav-link">6. Comparar Voos</a>
-            <a href="tela7.html" class="nav-link">7. Hospedagem</a>
-            <a href="tela8.html" class="nav-link">8. Passeios e Tours</a>
+            <a href="tela5.html" class="nav-link">✈️5. Pesquisa de Voos</a>
+          <a href="tela6.html" class="nav-link">📊6. Comparar Voos</a>
+            <a href="tela7.html" class="nav-link">🏨7. Hospedagem</a>
+            <a href="tela8.html" class="nav-link">🗺️8. Passeios e Tours</a>
           </ul>
         </div>
 
@@ -52,10 +53,10 @@
         <div class="nav-section">
           <h3 class="nav-section-title">CHECKOUT</h3>
           <ul class="nav-list">
-             <a href="tela9.html" class="nav-link">9. Resumo da Reserva</a>
-            <a href="tela10.html" class="nav-link">10. Passageiros</a>
-             <a href="tela11.html" class="nav-link">11. Pagamento</a>
-             <a href="tela12.html" class="nav-link">12. Confirmação</a>
+             <a href="tela9.html" class="nav-link">📄9. Resumo da Reserva</a>
+            <a href="tela10.html" class="nav-link">👥10. Passageiros</a>
+             <a href="tela11.html" class="nav-link">💳11. Pagamento</a>
+             <a href="tela12.html" class="nav-link">✅12. Confirmação</a>
           </ul>
         </div>
 
@@ -63,29 +64,30 @@
         <div class="nav-section">
           <h3 class="nav-section-title">GESTÃO DA VIAGEM</h3>
           <ul class="nav-list">
-            <a href="tela13.html" class="nav-link">13. Meu Roteiro</a>
-            <a href="tela14.html" class="nav-link">14. Controle Financeiro</a>
-            <a href="tela15.html" class="nav-link">15. Checklist da Mala</a>
-            <a href="tela16.html" class="nav-link">16. Minha Conta</a>
+            <a href="tela13.html" class="nav-link">✈13. Meu Roteiro</a>
+            <a href="tela14.html" class="nav-link">💲14. Controle Financeiro</a>
+            <a href="tela15.html" class="nav-link">☑ 15. Checklist da Mala</a>
+            <a href="tela16.html" class="nav-link">👤16. Minha Conta</a>
           </ul>
         </div>
       </nav>
     </aside>
 
-    <!-- Conteúdo Principal -->
+    <!-- Cabeçalho da página -->
     <div class="main-content">
       <header class="topbar">
         <div class="topbar__info">
           <span class="screen-indicator">Tela 1 de 16</span>
           <h1 class="topbar__title">1. Início</h1>
         </div>
-        <!-- CORREÇÃO 1: Classes dos botões do topo corrigidas -->
+        <!-- Ações do Cabeçalho (próxima e anterior)-->
         <div class="topbar-actions">
           <a href="tela2.html" class="btn-nav primary">Anterior  ›</a>
-         <a href="tela1.html" class="btn-nav primary">Próxima ›</a>
+         <a href="tela2.html" class="btn-nav primary">Próxima ›</a>
         </div>
       </header>
 
+      <!--  Corpo da pagina-->
       <main class="content-body">
         
         <!-- Banner Central -->
@@ -96,6 +98,8 @@
 
           <!-- Barra de Pesquisa Branca Flutuante -->
           <form class="search-bar">
+
+            <!-- Campo de Origem -->
             <div class="search__field">
               <span class="search__label">ORIGEM</span>
               <input class="search__input" type="text" name="origem" value="São Paulo (GRU)">
@@ -103,6 +107,7 @@
             
             <div class="search__divider"></div>
 
+            <!-- Campo de Destino -->
             <div class="search__field">
               <span class="search__label">DESTINO</span>
               <input class="search__input" type="text" name="destino" value="Kathmandu, Nepal">
@@ -110,11 +115,13 @@
 
             <div class="search__divider"></div>
 
+            <!-- Campo de Data -->
             <div class="search__field">
               <span class="search__label">DATA</span>
               <input class="search__input" type="text" name="data" value="12 Mai - 25 Mai">
             </div>
 
+            <!-- Botão de Busca -->
             <button class="search__button" type="submit">
               🔍 Buscar Agora
             </button>

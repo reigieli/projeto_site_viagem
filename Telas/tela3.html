@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Planner - Preferencias</title>
+  <title>Travel Planner - Preferências</title>
   
   <link rel="stylesheet" href="../ArquivosCSS/reset.css">
   <link rel="stylesheet" href="../ArquivosCSS/sidebar.css">
@@ -14,11 +13,191 @@
   <link rel="stylesheet" href="../ArquivosCSS/cards.css">
   <link rel="stylesheet" href="../ArquivosCSS/formularios.css">
   <link rel="stylesheet" href="../ArquivosCSS/tabelas.css">
+
+  <!-- Cod para deixar o botão com efeito de hover (quando passar o mouse por cima) -->
+  <style>
+      button, .card, a, input, select { transition: all 0.3s ease; }
+      .btn.primary:hover, .btn-nav.primary:hover, .btn-success:hover { 
+          background-color: #0f766e !important; 
+          transform: translateY(-1px); 
+          box-shadow: 0 4px 6px rgba(13, 148, 136, 0.2); 
+      }
+      .btn-nav:not(.primary):hover { 
+          background-color: #e5e7eb; 
+          color: #111827; 
+          border-radius: 4px; 
+      }
+      .btn-voltar:hover { 
+          color: #000000 !important; 
+          text-decoration: underline !important; 
+      }
+      .card:hover { 
+          border-color: #0d9488 !important; 
+          transform: translateY(-3px); 
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+      }
+      .nav-link:hover:not(.active) { 
+          background-color: #f1f5f9; 
+          color: #0f172a; 
+          border-radius: 6px; 
+      }
+  </style>
 </head>
 
 <body>
 
-  /*CODIGO DA TELA AQUI*/
+  <div class="app-layout">
+    
+    <!-- Parte do logo -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img class="logo-img" src="../imagens/logo.png" alt="Roamly - Travel Planner App">
+        <span class="sidebar-toggle">‹</span>
+      </div>
+
+      <!-- Menu de Navegação -->
+      <nav class="sidebar-nav">
+        <!-- Planejamento -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">PLANEJAMENTO</h3>
+          <ul class="nav-list">
+            <a href="tela1.html" class="nav-link">🌐 1. Início</a>
+            <a href="tela2.html" class="nav-link">📅 2. Dados da viagem</a>
+            <a href="tela3.html" class="nav-link active">✨ 3. Preferências</a>
+            <a href="tela4.html" class="nav-link">📍 4. Sugestões Destinos</a>
+          </ul>
+        </div>
+
+        <!-- Reservas e Seleção -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">RESERVAS E SELEÇÃO</h3>
+          <ul class="nav-list">
+            <a href="tela5.html" class="nav-link">✈️ 5. Pesquisa de Voos</a>
+            <a href="tela6.html" class="nav-link">📊 6. Comparar Voos</a>
+            <a href="tela7.html" class="nav-link">🏨 7. Hospedagem</a>
+            <a href="tela8.html" class="nav-link">🗺️ 8. Passeios e Tours</a>
+          </ul>
+        </div>
+
+        <!-- Checkout -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">CHECKOUT</h3>
+          <ul class="nav-list">
+             <a href="tela9.html" class="nav-link">📄 9. Resumo da Reserva</a>
+            <a href="tela10.html" class="nav-link">👥 10. Passageiros</a>
+             <a href="tela11.html" class="nav-link">💳 11. Pagamento</a>
+             <a href="tela12.html" class="nav-link">✅ 12. Confirmação</a>
+          </ul>
+        </div>
+
+        <!-- Gestão da Viagem -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">GESTÃO DA VIAGEM</h3>
+          <ul class="nav-list">
+            <a href="tela13.html" class="nav-link">✈ 13. Meu Roteiro</a>
+            <a href="tela14.html" class="nav-link">💲 14. Controle Financeiro</a>
+            <a href="tela15.html" class="nav-link">☑ 15. Checklist da Mala</a>
+            <a href="tela16.html" class="nav-link">👤 16. Minha Conta</a>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Cabeçalho da página -->
+    <div class="main-content">
+      <header class="topbar">
+        <div class="topbar__info">
+          <span class="screen-indicator">Tela 3 de 16</span>
+          <h1 class="topbar__title">3. Preferências</h1>
+        </div>
+        <!-- Ações do Cabeçalho (próxima e anterior)-->
+        <div class="topbar-actions">
+          <a href="tela2.html" class="btn-nav" style="text-decoration: none;">Anterior  ›</a>
+          <a href="tela4.html" class="btn-nav primary" style="text-decoration: none;">Próxima ›</a>
+        </div>
+      </header>
+
+      <!-- Corpo Principal (Mesma estrutura da Tela 2) -->
+      <main style="background-color: #f3f4f6; padding: 32px; min-height: 100vh; font-family: sans-serif;">
+        <section class="form-wrapper" style="background-color: #ffffff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); max-width: 900px; margin: 0 auto;">
+            
+            <div class="form-header" style="margin-bottom: 32px;">
+                <span class="step-indicator" style="color: #0d9488; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">PASSO 2 DE 3</span>
+                <h3 style="font-size: 24px; font-weight: 700; color: #111827; margin: 8px 0 4px 0;">Suas Preferências de Viagem</h3>
+                <p style="font-size: 14px; color: #6b7280; margin: 0;">Ajude nosso sistema a sugerir as melhores experiências para o seu perfil.</p>
+            </div>
+
+            <form class="travel-form">
+                
+                <!-- Estilo de Viagem Favorito -->
+                <div class="form-row" style="margin-bottom: 32px;">
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #374151; margin-bottom: 16px;">Estilo de Viagem Favorito</label>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+                        
+                        <div class="card" style="padding: 32px 16px; text-align: center; cursor: pointer; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 24px; margin-bottom: 12px; color: #9ca3af;">☼</div>
+                            <div style="font-size: 14px; font-weight: 500; color: #4b5563;">Praia & Sol</div>
+                        </div>
+                        
+                        <div class="card" style="padding: 32px 16px; text-align: center; cursor: pointer; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 24px; margin-bottom: 12px; color: #9ca3af;">❄</div>
+                            <div style="font-size: 14px; font-weight: 500; color: #4b5563;">Neve & Frio</div>
+                        </div>
+                        
+                        <div class="card" style="padding: 32px 16px; text-align: center; cursor: pointer; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 24px; margin-bottom: 12px; color: #9ca3af;">🏢</div>
+                            <div style="font-size: 14px; font-weight: 500; color: #4b5563;">Urbano & Cultura</div>
+                        </div>
+                        
+                        <div class="card" style="padding: 32px 16px; text-align: center; cursor: pointer; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 24px; margin-bottom: 12px; color: #9ca3af;">🧭</div>
+                            <div style="font-size: 14px; font-weight: 500; color: #4b5563;">Trilhas & Aventura</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Orçamento Estimado -->
+                <div class="form-row" style="margin-bottom: 32px;">
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #374151; margin-bottom: 16px;">Orçamento Estimado</label>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                        
+                        <div class="card" style="padding: 20px; cursor: pointer; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 15px; font-weight: 600; color: #111827; margin-bottom: 4px;">Econômica</div>
+                            <div style="font-size: 13px; color: #6b7280;">Mochilão & Pousadas</div>
+                        </div>
+                        
+                        <div class="card" style="padding: 20px; cursor: pointer; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 15px; font-weight: 600; color: #111827; margin-bottom: 4px;">Moderada</div>
+                            <div style="font-size: 13px; color: #6b7280;">Conforto & Boas opções</div>
+                        </div>
+                        
+                        <div class="card" style="padding: 20px; cursor: pointer; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <div style="font-size: 15px; font-weight: 600; color: #111827; margin-bottom: 4px;">Luxo</div>
+                            <div style="font-size: 13px; color: #6b7280;">Hotéis 5 estrelas & VIP</div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Botões finais do Form conectados com tag <a> -->
+                <div class="form-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; border-top: 1px solid #e5e7eb; padding-top: 24px;">
+                    
+                    <a href="tela2.html" class="btn-voltar" style="background: transparent; border: none; color: #4b5563; font-weight: 600; font-size: 14px; cursor: pointer; padding: 8px 0; text-decoration: none;">
+                        Voltar
+                    </a>
+                    
+                    <a href="tela4.html" class="btn-success" style="background-color: #0d9488; color: #ffffff; border: none; border-radius: 6px; padding: 12px 24px; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 1px 2px rgba(0,0,0,0.05); text-decoration: none; display: inline-block;">
+                        Avançar para Sugestões &rarr;
+                    </a>
+
+                </div>
+                
+            </form>
+        </section>
+      </main>
+    </div>
+  </div>
 
 </body>
 </html>

@@ -18,7 +18,140 @@
 
 <body>
 
-  /*CODIGO DA TELA AQUI*/
+ <div class="app-layout">
+    
+    <!--parte do logo -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img class="logo-img" src="../imagens/logo.png" alt="Roamly - Travel Planner App">
+        <span class="sidebar-toggle">‹</span>
+      </div>
 
-</body>
-</html>
+      <!-- Menu de Navegação -->
+      <nav class="sidebar-nav">
+        <!-- Planejamento -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">PLANEJAMENTO</h3>
+          <ul class="nav-list">
+            <a href="tela1.html" class="nav-link">🌐 1. Início</a>
+            <a href="tela2.html" class="nav-link">📅2. Dados da viagem</a>
+           <a href="tela3.html" class="nav-link">✨3. Preferências</a>
+            <a href="tela4.html" class="nav-link">📍4. Sugestões Destinos</a>
+          </ul>
+        </div>
+
+        <!-- Reservas e Seleção -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">RESERVAS E SELEÇÃO</h3>
+          <ul class="nav-list">
+            <a href="tela5.html" class="nav-link">✈️5. Pesquisa de Voos</a>
+          <a href="tela6.html" class="nav-link">📊6. Comparar Voos</a>
+            <a href="tela7.html" class="nav-link">🏨7. Hospedagem</a>
+            <a href="tela8.html" class="nav-link">🗺️8. Passeios e Tours</a>
+          </ul>
+        </div>
+
+        <!-- Checkout -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">CHECKOUT</h3>
+          <ul class="nav-list">
+             <a href="tela9.html" class="nav-link">📄9. Resumo da Reserva</a>
+            <a href="tela10.html" class="nav-link">👥10. Passageiros</a>
+             <a href="tela11.html" class="nav-link">💳11. Pagamento</a>
+             <a href="tela12.html" class="nav-link">✅12. Confirmação</a>
+          </ul>
+        </div>
+
+        <!-- Gestão da Viagem -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">GESTÃO DA VIAGEM</h3>
+          <ul class="nav-list">
+            <a href="tela13.html" class="nav-link">✈13. Meu Roteiro</a>
+            <a href="tela14.html" class="nav-link">💲14. Controle Financeiro</a>
+            <a href="tela15.html" class="nav-link">☑ 15. Checklist da Mala</a>
+            <a href="tela16.html" class="nav-link">👤16. Minha Conta</a>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Cabeçalho da página -->
+    <div class="main-content">
+      <header class="topbar">
+        <div class="topbar__info">
+          <span class="screen-indicator">Tela 2 de 16</span>
+          <h1 class="topbar__title">2. Dados da viagem</h1>
+        </div>
+        <!-- Ações do Cabeçalho (próxima e anterior)-->
+        <div class="topbar-actions">
+          <a href="tela1.html" class="btn-nav primary">Anterior  ›</a>
+         <a href="tela3.html" class="btn-nav primary">Próxima ›</a>
+        </div>
+      </header>
+
+      
+<main style="background-color: #f3f4f6; padding: 32px; min-height: 100vh; font-family: sans-serif;">
+    <section class="form-wrapper" style="background-color: #ffffff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); max-width: 900px; margin: 0 auto;">
+        
+        <div class="form-header" style="margin-bottom: 32px;">
+            <span class="step-indicator" style="color: #0d9488; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">PASSO 1 DE 3</span>
+            <h3 style="font-size: 24px; font-weight: 700; color: #111827; margin: 8px 0 4px 0;">Dados Básicos da Viagem</h3>
+            <p style="font-size: 14px; color: #6b7280; margin: 0;">Preencha as informações principais para montarmos seu roteiro sob medida.</p>
+        </div>
+
+        <form class="travel-form">
+            <!--Bloco origem e destino -->
+            <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+                <div class="form-group">
+                    <label for="origem" style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 8px;">Cidade de Origem</label>
+                    <input type="text" id="origem" name="origem" value="São Paulo - GRU" placeholder="Ex: São Paulo - GRU" style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; color: #374151; box-sizing: border-box; outline: none;">
+                </div>
+                <div class="form-group">
+                    <label for="destino" style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 8px;">Cidade de Destino</label>
+                    <input type="text" id="destino" name="destino" value="Kathmandu - Nepal" placeholder="Ex: Kathmandu - Nepal" style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; color: #374151; box-sizing: border-box; outline: none;">
+                </div>
+            </div>
+
+            <!-- Bloco de data (ida e volta) -->
+            <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+                <div class="form-group">
+                    <label for="data-ida" style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 8px;">Data de Partida (Ida)</label>
+                    <div class="input-icon-wrapper">
+                        <input type="text" id="data-ida" name="data-ida" value="12/05/2026" placeholder="DD/MM/AAAA" style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; color: #374151; box-sizing: border-box; outline: none;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="data-volta" style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 8px;">Data de Retorno (Volta)</label>
+                    <div class="input-icon-wrapper">
+                        <input type="text" id="data-volta" name="data-volta" value="25/05/2026" placeholder="DD/MM/AAAA" style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; color: #374151; box-sizing: border-box; outline: none;">
+                    </div>
+                </div>
+            </div>
+            
+            <!--Passageiros e Motivo -->
+            <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+                <div class="form-group">
+                    <label for="passageiros" style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 8px;">Quantidade de Passageiros</label>
+                    <select id="passageiros" name="passageiros" style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; color: #374151; box-sizing: border-box; outline: none; background-color: white;">
+                        <option value="2-adultos" selected>2 Adultos (Casal)</option>
+                        <option value="1-adulto">1 Adulto</option>
+                        <option value="familia">Família</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="motivo" style="display: block; font-size: 14px; font-weight: 500; color: #374151; margin-bottom: 8px;">Motivo / Tipo de Viagem</label>
+                    <select id="motivo" name="motivo" style="width: 100%; padding: 12px 16px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; color: #374151; box-sizing: border-box; outline: none; background-color: white;">
+                        <option value="ferias-lazer" selected>Férias & Lazer</option>
+                        <option value="negocios">Negócios</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Botões finais do Form -->
+            <div class="form-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px;">
+                <button type="button" style="background: transparent; border: none; color: #4b5563; font-weight: 600; font-size: 14px; cursor: pointer; padding: 8px 0;">Voltar</button>
+                <button type="submit" class="btn btn-success" style="background-color: #0d9488; color: #ffffff; border: none; border-radius: 6px; padding: 12px 24px; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">Avançar para Preferências &rarr;</button>
+            </div>
+        </form>
+    </section>
+</main>
