@@ -1,0 +1,33 @@
+/*Tela 6 de Comparacao de Passagens*/
+
+/*Container da tabela*/
+.table-container {
+  width: 100%;                   /*Ocupa toda a largura da tela*/
+  overflow-x: auto;              /*Cria uma barra de rolagem horizontal se a tabela for muito larga*/
+}
+
+/* Tabela padrao */
+.table {
+  width: 100%;                   /*Tabela ocupa 100% da largura disponivel*/
+  border-collapse: collapse;     /*Junta as bordas das celulas*/
+  background: #ffffff;           /*Fundo branco para a tabela*/
+  border-radius: 8px;            /*Arredonda os cantos externos da tabela*/
+  overflow: hidden;              /*Garante que o arredondamento corte os cantos internos perfeitamente*/
+  border: 1px solid #e5e7eb;     /*Borda externa leve ao redor da tabela*/
+}
+
+/*Celulas de cabecalho (th) e dados (td) da tabela*/
+.table th, 
+.table td {
+  padding: 12px 16px;            /*Espacamento interno para os textos respirarem*/
+  text-align: left;              /*Alinha o texto a esquerda por padrao*/
+  border-bottom: 1px solid #e5e7eb; /*Linha divisoria horizontal sutil entre as linhas*/
+  font-size: 14px;               /*Tamanho padrao do texto dentro da tabela*/
+}
+
+/*Cabecalho da tabela (linha superior com os titulos das colunas)*/
+.table th {
+  background-color: #f9fafb;     /*Fundo levemente acinzentado para diferenciar do corpo*/
+  font-weight: 600;              /*Texto em negrito para destacar os titulos*/
+  color: #374151;                /*Cor do texto do cabecalho em cinza escuro*/
+}

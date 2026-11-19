@@ -1,122 +1,79 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { Sidebar } from './components/Sidebar/Sidebar';
+import { Page09 } from './pages/page09';
+import { Page10 } from './pages/page10';
+import { Page11 } from './pages/page11';
+import { Page12 } from './pages/page12';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+export function App() {
+  const [telaAtual, setTelaAtual] = useState(9);
+
+  const nomesDasTelas: { [key: number]: string } = {
+    1: 'Início',
+    2: 'Dados da Viagem',
+    3: 'Preferências',
+    4: 'Sugestões Destinos',
+    5: 'Pesquisa de Voos',
+    6: 'Comparar Voos',
+    7: 'Hospedagem',
+    8: 'Passeios & Tours',
+    9: 'Resumo da Reserva',
+    10: 'Passageiros',
+    11: 'Pagamento',
+    12: 'Confirmação',
+    13: 'Meu Roteiro',
+    14: 'Controle Financeiro',
+    15: 'Checklist da Mala',
+    16: 'Minha Conta',
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="app-layout">
+      <Sidebar telaAtual={telaAtual} onMudarTela={setTelaAtual} />
 
-      <div className="ticks"></div>
+      <div className="main-content" style={{ backgroundColor: '#f8fafc' }}>
+        <header className="topbar">
+          <div className="topbar__info">
+            <span className="screen-indicator">
+              Tela {telaAtual} de 16 — {nomesDasTelas[telaAtual]}
+            </span>
+          </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+          <div className="topbar-actions">
+            <button
+              className="btn-nav"
+              onClick={() => setTelaAtual((t) => Math.max(t - 1, 1))}
+              disabled={telaAtual === 1}
+            >
+              ← Anterior
+            </button>
+            <button
+              className="btn-nav primary"
+              onClick={() => setTelaAtual((t) => Math.min(t + 1, 16))}
+              disabled={telaAtual === 16}
+            >
+              Próxima →
+            </button>
+          </div>
+        </header>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        <main className="content-body">
+          {telaAtual === 9 && <Page09 onMudarTela={setTelaAtual} />}
+          {telaAtual === 10 && <Page10 onMudarTela={setTelaAtual} />}
+          {telaAtual === 11 && <Page11 onMudarTela={setTelaAtual} />}
+          {telaAtual === 12 && <Page12 onMudarTela={setTelaAtual} />}
+          
+          {telaAtual !== 9 && telaAtual !== 10 && telaAtual !== 11 && telaAtual !== 12 && (
+            <div className="container">
+              <h2>{telaAtual}. {nomesDasTelas[telaAtual]}</h2>
+              <p>Conteúdo em desenvolvimento.</p>
+            </div>
+          )}
+        </main>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
