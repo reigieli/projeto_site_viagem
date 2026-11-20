@@ -18,7 +18,78 @@
 
 <body>
 
-  /*CODIGO DA TELA AQUI*/
+  <aside class="sidebar">
+  <div class="brand"><div class="logo">✈️</div><div><strong>ROAMLY</strong><small>Travel Planner App</small></div></div>
+  <h4>PLANEJAMENTO</h4>
+  <a href="#"><i>🌐</i>1. Início</a>
+  <a href="#"><i>📅</i>2. Dados da Viagem</a>
+  <a href="#"><i>✨</i>3. Preferências</a>
+  <a href="#"><i>📍</i>4. Sugestões Destinos</a>
+  <h4>RESERVAS &amp; SELEÇÃO</h4>
+  <a href="tela-5-voos.html" class="active"><i>✈</i>5. Pesquisa de Voos</a>
+  <a href="tela-6-comparar.html"><i>📊</i>6. Comparar Voos</a>
+  <a href="tela-7-hospedagem.html"><i>🏨</i>7. Hospedagem</a>
+  <a href="tela-8-passeios.html"><i>🎟</i>8. Passeios &amp; Tours</a>
+  <h4>CHECKOUT</h4>
+  <a href="#"><i>📄</i>9. Resumo da Reserva</a>
+  <a href="#"><i>👥</i>10. Passageiros</a>
+  <a href="#"><i>💳</i>11. Pagamento</a>
+  <a href="#"><i>✔</i>12. Confirmação</a>
+  <h4>GESTÃO DA VIAGEM</h4>
+  <a href="#"><i>🧭</i>13. Meu Roteiro</a>
+  <a href="#"><i>$</i>14. Controle Financeiro</a>
+  <a href="#"><i>☑</i>15. Checklist da Mala</a>
+  <a href="#"><i>👤</i>16. Minha Conta</a>
+</aside>
+
+<main>
+  <header class="topbar">
+    <span class="step">Tela 5 de 16</span>
+    <h1>5. Pesquisa de Voos</h1>
+    <span class="btn btn-out" style="opacity:.5">← Anterior</span>
+    <a class="btn btn-pri" href="tela-6-comparar.html">Próxima →</a>
+  </header>
+
+  <section class="screen on">
+    <div class="card">
+      <div class="head"><div><h2>5. Pesquisa de Passagens Aéreas</h2>
+        <p class="sub">Voos encontrados para: <b>São Paulo (GRU) ➔ Kathmandu (KTM)</b></p></div></div>
+      <div class="layout">
+        <aside class="filters">
+          <div class="f-head"><span>⛉ Filtros</span><a href="#">Limpar</a></div>
+          <label class="t" for="preco">Preço Máximo: R$ <span id="pv">6.000</span></label>
+          <input type="range" id="preco" min="3000" max="9000" step="100" value="6000">
+          <label class="t">Paradas / Escalas</label>
+          <label class="chk"><input type="checkbox" checked> Voos Diretos</label>
+          <label class="chk"><input type="checkbox" checked> 1 Parada</label>
+          <label class="chk"><input type="checkbox"> 2+ Paradas</label>
+          <label class="t">Companhias Aéreas</label>
+          <label class="chk"><input type="checkbox" checked> Qatar Airways</label>
+          <label class="chk"><input type="checkbox" checked> Emirates</label>
+          <label class="chk"><input type="checkbox" checked> Turkish Airlines</label>
+        </aside>
+        <div>
+          <article class="flight"><div class="air">QA</div>
+            <div class="fi"><b>Qatar Airways</b>1 parada (Doha) • 18h 45m</div>
+            <div class="times">14:30 GRU ➔ 19:15 KTM (+1d)<small>Bagagem de mão + despachada inclusa</small></div>
+            <div class="buy"><span class="price">R$ 5.200</span><button class="btn btn-sel">Selecionar</button></div></article>
+          <article class="flight"><div class="air">AE</div>
+            <div class="fi"><b>Emirates</b>1 parada (Dubai) • 20h 15m</div>
+            <div class="times">01:25 GRU ➔ 08:40 KTM (+1d)<small>Bagagem de mão + despachada inclusa</small></div>
+            <div class="buy"><span class="price">R$ 4.950</span><button class="btn btn-sel">Selecionar</button></div></article>
+          <article class="flight"><div class="air">TR</div>
+            <div class="fi"><b>Turkish Airlines</b>1 parada (Istambul) • 22h 35m</div>
+            <div class="times">22:40 GRU ➔ 06:15 KTM (+1d)<small>Bagagem de mão + despachada inclusa</small></div>
+            <div class="buy"><span class="price">R$ 4.600</span><button class="btn btn-sel">Selecionar</button></div></article>
+          </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+document.getElementById('preco').oninput=e=>document.getElementById('pv').textContent=(+e.target.value).toLocaleString('pt-BR');
+</script>
 
 </body>
 </html>
