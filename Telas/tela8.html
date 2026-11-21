@@ -17,8 +17,61 @@
 </head>
 
 <body>
+*Tela de passeios*
+<aside class="sidebar">
+  <div class="brand"><div class="logo">✈️</div><div><strong>ROAMLY</strong><small>Travel Planner App</small></div></div>
+  <h4>PLANEJAMENTO</h4>
+  <a href="#"><i>🌐</i>1. Início</a>
+  <a href="#"><i>📅</i>2. Dados da Viagem</a>
+  <a href="#"><i>✨</i>3. Preferências</a>
+  <a href="#"><i>📍</i>4. Sugestões Destinos</a>
+  <h4>RESERVAS &amp; SELEÇÃO</h4>
+  <a href="tela-5-voos.html"><i>✈</i>5. Pesquisa de Voos</a>
+  <a href="tela-6-comparar.html"><i>📊</i>6. Comparar Voos</a>
+  <a href="tela-7-hospedagem.html"><i>🏨</i>7. Hospedagem</a>
+  <a href="tela-8-passeios.html" class="active"><i>🎟</i>8. Passeios &amp; Tours</a>
+  <h4>CHECKOUT</h4>
+  <a href="#"><i>📄</i>9. Resumo da Reserva</a>
+  <a href="#"><i>👥</i>10. Passageiros</a>
+  <a href="#"><i>💳</i>11. Pagamento</a>
+  <a href="#"><i>✔</i>12. Confirmação</a>
+  <h4>GESTÃO DA VIAGEM</h4>
+  <a href="#"><i>🧭</i>13. Meu Roteiro</a>
+  <a href="#"><i>$</i>14. Controle Financeiro</a>
+  <a href="#"><i>☑</i>15. Checklist da Mala</a>
+  <a href="#"><i>👤</i>16. Minha Conta</a>
+</aside>
 
-  /*CODIGO DA TELA AQUI*/
+<main>
+  <header class="topbar">
+    <span class="step">Tela 8 de 16</span>
+    <h1>8. Passeios &amp; Tours</h1>
+    <a class="btn btn-out" href="tela-7-hospedagem.html">← Anterior</a>
+    <span class="btn btn-pri" style="opacity:.5">Próxima →</span>
+  </header>
+
+  <section class="screen on">
+    <div class="card">
+      <div class="head"><div><h2>8. Adicionar Passeios e Experiências</h2><p>Personalize seu pacote adicionando tours guiados ao seu roteiro.</p></div>
+        <a class="btn btn-pri" href="#">Ir para Resumo da Compra &gt;</a></div>
+      <article class="tour"><div><h3>Trekking ao Acampamento Base do Everest (Voo de Helicóptero) <span>1 dia inteiro</span></h3>
+        <p>Sobrevoo espetacular pelos picos mais altos do planeta com parada para café da manhã nas montanhas.</p></div>
+        <div class="r"><span class="price">R$ 1.450</span><button class="btn added tg">✓ Adicionado</button></div></article>
+      <article class="tour"><div><h3>Tour Cultural Templos de Kathmandu &amp; Durbar Square <span>6 horas</span></h3>
+        <p>Guia historiador local, entradas para templos sagrados e transporte privado incluídos.</p></div>
+        <div class="r"><span class="price">R$ 220</span><button class="btn btn-dark tg">+ Incluir no Pacote</button></div></article>
+      <article class="tour"><div><h3>Safari de Rinocerontes no Parque Nacional de Chitwan <span>2 dias / 1 noite</span></h3>
+        <p>Aventura na selva nepalesa com avistamento de fauna selvagem e hospedagem estilo eco-lodge.</p></div>
+        <div class="r"><span class="price">R$ 580</span><button class="btn btn-dark tg">+ Incluir no Pacote</button></div></article>
+      </div>
+  </section>
+</main>
+
+<script>
+document.querySelectorAll('.tg').forEach(b=>b.onclick=()=>{
+  const on=b.classList.toggle('added');b.classList.toggle('btn-dark',!on);
+  b.textContent=on?'✓ Adicionado':'+ Incluir no Pacote';});
+</script>
 
 </body>
 </html>
