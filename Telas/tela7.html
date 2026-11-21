@@ -17,8 +17,63 @@
 </head>
 
 <body>
+*Tela de hospedagens*
+<aside class="sidebar">
+  <div class="brand"><div class="logo">✈️</div><div><strong>ROAMLY</strong><small>Travel Planner App</small></div></div>
+  <h4>PLANEJAMENTO</h4>
+  <a href="#"><i>🌐</i>1. Início</a>
+  <a href="#"><i>📅</i>2. Dados da Viagem</a>
+  <a href="#"><i>✨</i>3. Preferências</a>
+  <a href="#"><i>📍</i>4. Sugestões Destinos</a>
+  <h4>RESERVAS &amp; SELEÇÃO</h4>
+  <a href="tela-5-voos.html"><i>✈</i>5. Pesquisa de Voos</a>
+  <a href="tela-6-comparar.html"><i>📊</i>6. Comparar Voos</a>
+  <a href="tela-7-hospedagem.html" class="active"><i>🏨</i>7. Hospedagem</a>
+  <a href="tela-8-passeios.html"><i>🎟</i>8. Passeios &amp; Tours</a>
+  <h4>CHECKOUT</h4>
+  <a href="#"><i>📄</i>9. Resumo da Reserva</a>
+  <a href="#"><i>👥</i>10. Passageiros</a>
+  <a href="#"><i>💳</i>11. Pagamento</a>
+  <a href="#"><i>✔</i>12. Confirmação</a>
+  <h4>GESTÃO DA VIAGEM</h4>
+  <a href="#"><i>🧭</i>13. Meu Roteiro</a>
+  <a href="#"><i>$</i>14. Controle Financeiro</a>
+  <a href="#"><i>☑</i>15. Checklist da Mala</a>
+  <a href="#"><i>👤</i>16. Minha Conta</a>
+</aside>
 
-  /*CODIGO DA TELA AQUI*/
+<main>
+  <header class="topbar">
+    <span class="step">Tela 7 de 16</span>
+    <h1>7. Hospedagem</h1>
+    <a class="btn btn-out" href="tela-6-comparar.html">← Anterior</a>
+    <a class="btn btn-pri" href="tela-8-passeios.html">Próxima →</a>
+  </header>
+
+  <section class="screen on">
+    <div class="card">
+      <div class="head"><div><h2>7. Seleção de Hospedagem em Kathmandu</h2><p>Escolha onde ficar hospedado durante sua aventura.</p></div>
+        <a class="btn btn-dark" href="tela-8-passeios.html">Avançar para Passeios &gt;</a></div>
+      <div class="hotels">
+        <article class="hotel sel"><div class="ph"></div><span class="rate">4.9</span>
+          <h3>Himalayan Boutique Hotel</h3><p>Café da manhã incluso • Wi-Fi Grátis • Vista para as Montanhas</p>
+          <div class="h-foot"><div class="price">R$ 280<small>R$ 3.640 (13 noites)</small></div><button class="btn btn-sel">Selecionado</button></div></article>
+        <article class="hotel"><div class="ph"></div><span class="rate">4.7</span>
+          <h3>Kathmandu Eco Resort</h3><p>Café da manhã incluso • Wi-Fi Grátis • Vista para as Montanhas</p>
+          <div class="h-foot"><div class="price">R$ 190<small>R$ 2.470 (13 noites)</small></div><button class="btn btn-soft">Escolher</button></div></article>
+        <article class="hotel"><div class="ph"></div><span class="rate">5.0</span>
+          <h3>Yak &amp; Yeti Heritage Resort</h3><p>Café da manhã incluso • Wi-Fi Grátis • Vista para as Montanhas</p>
+          <div class="h-foot"><div class="price">R$ 450<small>R$ 5.850 (13 noites)</small></div><button class="btn btn-soft">Escolher</button></div></article>
+        </div>
+    </div>
+  </section>
+</main>
+
+<script>
+document.querySelectorAll('.hotel .h-foot .btn').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.hotel').forEach(h=>{h.classList.remove('sel');const x=h.querySelector('.btn');x.className='btn btn-soft';x.textContent='Escolher'});
+  const h=b.closest('.hotel');h.classList.add('sel');b.className='btn btn-sel';b.textContent='Selecionado';});
+</script>
 
 </body>
 </html>
