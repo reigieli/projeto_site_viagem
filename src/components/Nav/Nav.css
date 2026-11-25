@@ -1,0 +1,72 @@
+/* =========================================================
+   ELEMENT: NAV SECTION TITLE
+   Título de identificação utilizado para separar e organizar
+   grupos de links dentro do menu de navegação.
+   ========================================================= */
+
+.nav__section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #64748b;
+  margin-bottom: 8px;
+  padding-left: 8px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ELEMENT: NAV LIST
+   Lista responsável por agrupar e organizar verticalmente
+   os links do menu de navegação.
+   ========================================================= */
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+
+/* =========================================================
+   ELEMENT: NAV LINK
+   Link individual do menu, com alinhamento para ícones
+   e textos, além de estilos de interação.
+   ========================================================= */
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  color: #94a3b8;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+
+/* =========================================================
+   STATE: NAV LINK HOVER
+   Estado visual do link quando o usuário posiciona
+   o cursor sobre ele.
+   ========================================================= */
+
+.nav__link:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MODIFIER: NAV LINK ACTIVE
+   Destaca o link correspondente à página ou seção
+   atualmente selecionada no menu.
+   ========================================================= */
+
+.nav__link--active {
+  background-color: #0d9488;
+  color: #ffffff;
+  font-weight: 600;
+}
