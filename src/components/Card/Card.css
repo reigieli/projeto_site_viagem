@@ -1,45 +1,177 @@
-/*Para as caixinhas, hoteis, voos, destinos e widgets*/
 
-/*estrutura basica de qualquer bloco visual do site*/
+/* =========================================================
+   BLOCK: CARD
+   Card padrão utilizado em hotéis, voos, destinos e widgets.
+   ========================================================= */
+
 .card {
-  background: #ffffff;           /*Cor de fundo branca para destacar o card*/
-  border-radius: 12px;           /*Arredonda as pontas do card*/
-  padding: 20px;                 /*Espacamento interno em todas as direcoes*/
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);    /*efeito de profundidade*/
-  border: 1px solid #e5e7eb;     /*Borda fina e cinza claro para delimitar o card*/
+  background-color: var(--color-surface, #ffffff);
+  border-radius: var(--radius-md, 12px);
+  overflow: hidden;
+  border: 1px solid var(--color-border, #e5e7eb);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
-/*Efeito para cards interativos (hoteis ou voos em que pode clicar)*/
-.card-interactive {
-  cursor: pointer;               /*Muda o cursor para a "maozinha"*/
-  transition: transform 0.2s, box-shadow 0.2s;  /*Suaviza a animacao de movimento e sombra*/
-}
-.card-interactive:hover {
-  transform: translateY(-3px);   /*Move o card levemente para cima ao passar o mouse*/
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);   /*Aumenta a sombra dando destaque ao card*/
+
+/* =========================================================
+   MODIFIER: CARD INTERACTIVE
+   Variação para cards clicáveis, com efeito de hover.
+   ========================================================= */
+
+.card--interactive {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/*Cabecalho interno do card (titulo de um lado e botao do outro)*/
-.card-header {
-  display: flex;                    /*Coloca os itens internos lado a lado*/
-  justify-content: space-between;   /*Joga um item totalmente para a esquerda e outro para a direita*/
-  align-items: center;              /*Alinha os itens verticalmente ao centro */
-  margin-bottom: 12px;              /*Da um respiro (espaco) abaixo do cabecalho*/
+.card--interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/*Estilo base para os pequenos emblemas ou etiquetas nas telas*/
-.badge {
-  display: inline-flex;
+
+/* =========================================================
+   ELEMENT: CARD HEADER
+   Cabeçalho do card, utilizado para organizar título e ações.
+   ========================================================= */
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 4px;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 700;
+  margin-bottom: 12px;
 }
 
-/*Variação de sucesso (selos verdes de compatibilidade ou "Adicionado")*/
-.badge-success {
-  background-color: #d1fae5;              /*Fundo verde bem claro*/
-  color: #065f46;                         /*Texto verde escuro*/
+
+/* =========================================================
+   ELEMENT: CARD IMAGE WRAPPER
+   Container da imagem, permitindo posicionar badges sobre ela.
+   ========================================================= */
+
+.card__image-wrapper {
+  position: relative;
+  height: 140px;
+  width: 100%;
+}
+
+
+/* =========================================================
+   ELEMENT: CARD BADGE
+   Etiqueta informativa exibida sobre a imagem do card.
+   ========================================================= */
+
+.card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  color: var(--color-text-main);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   ELEMENT: CARD IMAGE
+   Imagem principal exibida dentro do card.
+   ========================================================= */
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #cbd5e1;
+}
+
+
+/* =========================================================
+   ELEMENT: CARD CONTENT
+   Área interna destinada ao conteúdo e informações do card.
+   ========================================================= */
+
+.card__content {
+  padding: 16px;
+}
+
+
+/* =========================================================
+   ELEMENT: CARD TITLE
+   Título principal do card.
+   ========================================================= */
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   ELEMENT: CARD FOOTER
+   Rodapé utilizado para organizar informações complementares.
+   ========================================================= */
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* =========================================================
+   ELEMENT: CARD LABEL
+   Texto auxiliar para informações como localização e categoria.
+   ========================================================= */
+
+.card__label {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+
+/* =========================================================
+   ELEMENT: CARD PRICE
+   Área responsável pela apresentação de preços.
+   ========================================================= */
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Valor principal do preço */
+.card__price-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+
+/* =========================================================
+   MODIFIER: CARD DESTINATION
+   Variação específica para cards de destinos turísticos.
+   ========================================================= */
+
+.card--destination {
+  padding: 0;
+}
+
+/* Container da imagem com proporção 16:9 */
+.card--destination .card__image-wrapper {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Área de conteúdo dos cards de destinos */
+.card--destination .card__content {
+  padding: 12px;
 }
