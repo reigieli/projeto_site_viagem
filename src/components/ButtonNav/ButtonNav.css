@@ -1,0 +1,34 @@
+
+/* =========================================================
+   BLOCK: BUTTON NAV
+   Botão de navegação utilizado em controles de paginação,
+   navegação entre etapas e ações de avançar ou voltar.
+   ========================================================= */
+
+.button-nav {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #374151;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   MODIFIER: BUTTON NAV PRIMARY
+   Variação de destaque para ações principais de navegação,
+   como o botão "Próxima".
+   ========================================================= */
+
+.button-nav--primary {
+  background-color: #0d9488;
+  color: #ffffff;
+  border: none;
+}
