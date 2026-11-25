@@ -1,0 +1,66 @@
+/* =========================================================
+   BLOCK: TOPBAR
+   Barra superior da aplicação, responsável por organizar
+   o título da tela, indicadores e ações disponíveis.
+   ========================================================= */
+
+.topbar {
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* =========================================================
+   ELEMENT: TOPBAR INFO
+   Agrupamento responsável por alinhar o título da tela
+   atual e seu respectivo indicador.
+   ========================================================= */
+
+.topbar__info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* =========================================================
+   ELEMENT: TOPBAR TITLE
+   Título que identifica a página ou seção atualmente
+   acessada pelo usuário.
+   ========================================================= */
+
+.topbar__title {
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   ELEMENT: TOPBAR INDICATOR
+   Etiqueta visual utilizada para apresentar informações
+   complementares, como o número da tela atual.
+   ========================================================= */
+
+.topbar__indicator {
+  background-color: #ccfbf1;
+  color: #0f766e;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ELEMENT: TOPBAR ACTIONS
+   Agrupamento dos botões e controles de ação posicionados
+   no lado direito da barra superior.
+   ========================================================= */
+
+.topbar__actions {
+  display: flex;
+  gap: 8px;
+}
