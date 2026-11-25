@@ -1,0 +1,71 @@
+
+/* =========================================================
+   BLOCK: DESTINATIONS
+   Seção responsável por apresentar os destinos turísticos
+   populares disponíveis no site.
+   ========================================================= */
+
+.destinations {
+  padding: 24px 32px 32px;
+}
+
+
+/* =========================================================
+   ELEMENT: DESTINATIONS HEADER
+   Cabeçalho da seção, organizando título, descrição e link
+   de navegação.
+   ========================================================= */
+
+.destinations__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   ELEMENT: DESTINATIONS TITLE
+   Título principal da seção de destinos.
+   ========================================================= */
+
+.destinations__title {
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   ELEMENT: DESTINATIONS SUBTITLE
+   Texto complementar que apresenta uma descrição da seção.
+   ========================================================= */
+
+.destinations__subtitle {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ELEMENT: DESTINATIONS LINK
+   Link de navegação para visualizar mais destinos disponíveis.
+   ========================================================= */
+
+.destinations__link {
+  color: #0d9488;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   ELEMENT: DESTINATIONS GRID
+   Grade responsável por organizar os cards de destinos
+   em colunas, mantendo espaçamento entre eles.
+   ========================================================= */
+
+.destinations__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
