@@ -1,0 +1,41 @@
+/* =========================================================
+   BLOCK: LOGO
+   Área de identificação visual da marca, responsável por
+   agrupar e alinhar os elementos da logo.
+   ========================================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* =========================================================
+   ELEMENT: LOGO IMAGE
+   Imagem principal da logo, mantendo sua proporção original.
+   ========================================================= */
+
+.logo__img {
+  width: 160px;
+  height: auto;
+}
+
+
+/* =========================================================
+   ELEMENT: LOGO ICON
+   Ícone quadrado colorido que compõe a identidade visual
+   da marca, com conteúdo centralizado.
+   ========================================================= */
+
+.logo__icon {
+  width: 36px;
+  height: 36px;
+  background-color: #0d9488;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
+}
