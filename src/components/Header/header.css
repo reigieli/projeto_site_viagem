@@ -1,0 +1,49 @@
+.header {
+  height: var(--header-height);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.header__title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.header__auth {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__auth-btn {
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.header__auth-btn--login {
+  background: transparent;
+  color: var(--color-text-main);
+}
+
+.header__auth-btn--login:hover {
+  color: var(--color-primary);
+}
+
+.header__auth-btn--register {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.header__auth-btn--register:hover {
+  background-color: var(--color-primary-dark);
+}
