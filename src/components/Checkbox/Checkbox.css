@@ -1,0 +1,28 @@
+
+/* =========================================================
+   BLOCK: CHECKBOX GROUP
+   Grupo de seleção que organiza uma caixa de seleção
+   junto ao seu texto ou descrição.
+   ========================================================= */
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   ELEMENT: CHECKBOX INPUT
+   Personaliza a aparência e as dimensões do campo checkbox.
+   ========================================================= */
+
+.checkbox-group input[type="checkbox"] {
+  accent-color: #0d9488;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
