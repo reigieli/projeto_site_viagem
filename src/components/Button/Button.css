@@ -1,0 +1,63 @@
+
+/* =========================================================
+   BLOCK: BUTTON
+   Botão padrão reutilizável para ações e interações do site.
+   ========================================================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  background: transparent;
+}
+
+
+/* =========================================================
+   MODIFIER: BUTTON PRIMARY
+   Variação principal do botão, utilizada para ações de destaque.
+   ========================================================= */
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.button--primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+
+/* =========================================================
+   MODIFIER: BUTTON OUTLINE
+   Variação com fundo claro e borda, utilizada para ações secundárias.
+   ========================================================= */
+
+.button--outline {
+  background-color: #ffffff;
+  border-color: var(--color-border);
+  color: var(--color-text-main);
+}
+
+.button--outline:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+
+/* =========================================================
+   MODIFIER: BUTTON FULL
+   Faz o botão ocupar toda a largura disponível do container.
+   ========================================================= */
+
+.button--full {
+  width: 100%;
+}
