@@ -1,5 +1,9 @@
-/* BLOCK: .btn */
-.btn {
+/* =========================================================
+   BLOCK: BUTTON
+   Botão padrão reutilizável para ações e interações do site.
+   ========================================================= */
+
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -15,27 +19,64 @@
   background: transparent;
 }
 
-/* MODIFIERS: Tipos de botão */
-.btn--primary {
+
+/* =========================================================
+   MODIFIER: BUTTON PRIMARY
+   Variação principal do botão, utilizada para ações de destaque.
+   ========================================================= */
+
+.button--primary {
   background-color: var(--color-primary);
   color: #ffffff;
 }
 
-.btn--primary:hover {
+.button--primary:hover {
   background-color: var(--color-primary-dark);
 }
 
-.btn--outline {
+
+/* =========================================================
+   MODIFIER: BUTTON OUTLINE
+   Variação com fundo claro e borda, utilizada para ações secundárias.
+   ========================================================= */
+
+.button--outline {
   background-color: #ffffff;
   border-color: var(--color-border);
   color: var(--color-text-main);
 }
 
-.btn--outline:hover {
+.button--outline:hover {
   background-color: #f8fafc;
   border-color: #cbd5e1;
 }
 
-.btn--full {
+
+/* =========================================================
+   MODIFIER: BUTTON FULL
+   Faz o botão ocupar toda a largura disponível do container.
+   ========================================================= */
+
+.button--full {
   width: 100%;
+}
+
+
+/* =========================================================
+   STATE: DISABLED
+   Botão desabilitado (formulário enviando, nada para salvar...).
+   ========================================================= */
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.button--primary:disabled:hover {
+  background-color: var(--color-primary);
+}
+
+.button--outline:disabled:hover {
+  background-color: #ffffff;
+  border-color: var(--color-border);
 }

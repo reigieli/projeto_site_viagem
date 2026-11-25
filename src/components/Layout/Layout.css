@@ -1,0 +1,126 @@
+/* ===== APP LAYOUT (Header + conteúdo + Footer) ===== */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell__main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+@media (max-width: 768px) {
+  .app-shell__main {
+    padding: 20px 12px;
+  }
+}
+
+/* ===== AUTH LAYOUT (tela dividida) ===== */
+.auth-layout {
+  display: grid;
+  grid-template-columns: minmax(340px, 5fr) 6fr;
+  min-height: 100vh;
+  background-color: var(--color-surface);
+}
+
+.auth-layout__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 40px 48px;
+  color: #ffffff;
+  /* mesmo fundo azul-marinho do logo, com os pontinhos do Hero */
+  background:
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(160deg, #0f172a 55%, #0f3d3a);
+}
+
+.auth-layout__logo {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+}
+
+.auth-layout__headline {
+  margin: 16px 0 12px;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.auth-layout__text {
+  max-width: 420px;
+  color: var(--color-primary-light);
+  line-height: 1.6;
+}
+
+.auth-layout__copy {
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+
+.auth-layout__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  overflow-y: auto;
+}
+
+.auth-layout__panel {
+  width: 100%;
+  max-width: 440px;
+}
+
+/* elementos usados pelas páginas Login e Cadastro */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form__submit {
+  margin-top: 8px;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.auth-switch a {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-layout__aside {
+    padding: 24px;
+    gap: 12px;
+  }
+
+  .auth-layout__logo {
+    width: 200px;
+  }
+
+  .auth-layout__aside > div,
+  .auth-layout__copy {
+    display: none;
+  }
+}

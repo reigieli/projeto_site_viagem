@@ -1,0 +1,20 @@
+.alert {
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.alert--error {
+  background-color: var(--color-danger-bg);
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.alert--success {
+  background-color: var(--color-success-bg);
+  border-color: #a7f3d0;
+  color: var(--color-success);
+}
