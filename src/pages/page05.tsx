@@ -1,7 +1,7 @@
-import React from "react";
-import '../components/Card/Card.css';
-import '../components/Grid/Grid.css';
-import '../styles/botoes.css';
+// Passagens.tsx
+import { useMemo, useState } from "react";
+import { Filter } from "lucide-react";
+import AppLayout from "./AppLayout";
 
 interface Flight {
   id: string;

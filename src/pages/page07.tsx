@@ -1,9 +1,9 @@
-import '../components/Card/Card.css';
-import '../components/Grid/Grid.css';
-import '../styles/botoes.css';
+// Hospedagem.tsx
+import { useState } from "react";
+import { Star } from "lucide-react";
+import AppLayout from "./AppLayout";
 
 const NIGHTS = 13;
-
 const HOTELS = [
   { id: "himalayan", name: "Himalayan Boutique Hotel", rating: 4.9, perNight: 280 },
   { id: "eco", name: "Kathmandu Eco Resort", rating: 4.7, perNight: 190 },

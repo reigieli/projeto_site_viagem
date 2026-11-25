@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { Sidebar } from './components/Sidebar/Sidebar';
+import { Page05 } from './pages/page05';
+Import { Page06 } from './pages/page06';
+Import { Page07 } from './pages/page07';
+Import { Page08 } from './pages/page08';
 import { Page09 } from './pages/page09';
 import { Page10 } from './pages/page10';
 import { Page11 } from './pages/page11';

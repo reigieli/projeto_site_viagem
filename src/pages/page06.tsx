@@ -1,6 +1,7 @@
-import '../components/Card/Card.css';
-import '../components/Grid/Grid.css';
-import '../styles/botoes.css';
+// Comparacao de passagens.tsx
+import { useState } from "react";
+import { Star } from "lucide-react";
+import AppLayout from "./AppLayout";
 
 const OPTIONS = [
   { id: "qatar", name: "Qatar", label: "Opção 1 (Qatar)", recommended: true, price: 5200, duration: "18h 45m", durationNote: "(Mais rápido)", layover: "Doha (2h de espera)", baggage: "2 malas (23kg cada)", bags: 2, rating: 4.9 },

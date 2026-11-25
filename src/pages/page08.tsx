@@ -1,6 +1,7 @@
-import '../components/Card/Card.css';
-import '../components/Grid/Grid.css';
-import '../styles/botoes.css';
+// Passeios.tsx
+import { useState } from "react";
+import { Check } from "lucide-react";
+import AppLayout from "./AppLayout";
 
 const TOURS = [
   { id: "everest", title: "Trekking ao Acampamento Base do Everest (Voo de Helicóptero)", duration: "1 dia inteiro", description: "Sobrevoo espetacular pelos picos mais altos do planeta com parada para café da manhã nas montanhas.", price: 1450 },
