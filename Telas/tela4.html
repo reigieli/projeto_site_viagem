@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Planner - Sugestoes</title>
+  
+  <link rel="stylesheet" href="../ArquivosCSS/reset.css">
+  <link rel="stylesheet" href="../ArquivosCSS/sidebar.css">
+  <link rel="stylesheet" href="../ArquivosCSS/grades.css">
+  <link rel="stylesheet" href="../ArquivosCSS/botoes.css">
+  <link rel="stylesheet" href="../ArquivosCSS/cards.css">
+  <link rel="stylesheet" href="../ArquivosCSS/formularios.css">
+  <link rel="stylesheet" href="../ArquivosCSS/tabelas.css">
+
+  <style>
+        /* Importando fonte do Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        /* Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        </style>
+
+        <!-- Carrega o React -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<!-- Carrega o tradutor Babel -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Planner - Sugestões Destinos</title>
+  
+  <link rel="stylesheet" href="../ArquivosCSS/reset.css">
+  <link rel="stylesheet" href="../ArquivosCSS/sidebar.css">
+  <link rel="stylesheet" href="../ArquivosCSS/grades.css">
+  <link rel="stylesheet" href="../ArquivosCSS/botoes.css">
+  <link rel="stylesheet" href="../ArquivosCSS/cards.css">
+  <link rel="stylesheet" href="../ArquivosCSS/formularios.css">
+  <link rel="stylesheet" href="../ArquivosCSS/tabelas.css">
+
+  <!-- Cod para deixar o botão com efeito de hover (quando passar o mouse por cima) -->
+  <style>
+      button, .card, a, input, select { transition: all 0.3s ease; }
+      .btn.primary:hover, .btn-nav.primary:hover, .btn-success:hover, .btn-dark:hover { 
+          background-color: #0f766e !important; 
+          transform: translateY(-1px); 
+          box-shadow: 0 4px 6px rgba(13, 148, 136, 0.2); 
+      }
+      .btn-dark:hover {
+          background-color: #1f2937 !important;
+      }
+      .btn-nav:not(.primary):hover { 
+          background-color: #e5e7eb; 
+          color: #111827; 
+          border-radius: 4px; 
+      }
+      .card:hover { 
+          border-color: #0d9488 !important; 
+          transform: translateY(-3px); 
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+      }
+      .nav-link:hover:not(.active) { 
+          background-color: #f1f5f9; 
+          color: #0f172a; 
+          border-radius: 6px; 
+      }
+      .select-link:hover {
+          text-decoration: underline !important;
+      }
+  </style>
+</head>
+
+<body>
+
+  <div class="app-layout">
+    
+    <!-- Parte do logo -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img class="logo-img" src="../imagens/logo.png" alt="Roamly - Travel Planner App">
+        <span class="sidebar-toggle">‹</span>
+      </div>
+
+      <!-- Menu de Navegação -->
+      <nav class="sidebar-nav">
+        <!-- Planejamento -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">PLANEJAMENTO</h3>
+          <ul class="nav-list">
+            <a href="tela1.html" class="nav-link">🌐 1. Início</a>
+            <a href="tela2.html" class="nav-link">📅 2. Dados da viagem</a>
+            <a href="tela3.html" class="nav-link">✨ 3. Preferências</a>
+            <a href="tela4.html" class="nav-link active">📍 4. Sugestões Destinos</a>
+          </ul>
+        </div>
+
+        <!-- Reservas e Seleção -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">RESERVAS E SELEÇÃO</h3>
+          <ul class="nav-list">
+            <a href="tela5.html" class="nav-link">✈️ 5. Pesquisa de Voos</a>
+            <a href="tela6.html" class="nav-link">📊 6. Comparar Voos</a>
+            <a href="tela7.html" class="nav-link">🏨 7. Hospedagem</a>
+            <a href="tela8.html" class="nav-link">🗺️ 8. Passeios e Tours</a>
+          </ul>
+        </div>
+
+        <!-- Checkout -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">CHECKOUT</h3>
+          <ul class="nav-list">
+             <a href="tela9.html" class="nav-link">📄 9. Resumo da Reserva</a>
+            <a href="tela10.html" class="nav-link">👥 10. Passageiros</a>
+             <a href="tela11.html" class="nav-link">💳 11. Pagamento</a>
+             <a href="tela12.html" class="nav-link">✅ 12. Confirmação</a>
+          </ul>
+        </div>
+
+        <!-- Gestão da Viagem -->
+        <div class="nav-section">
+          <h3 class="nav-section-title">GESTÃO DA VIAGEM</h3>
+          <ul class="nav-list">
+            <a href="tela13.html" class="nav-link">✈ 13. Meu Roteiro</a>
+            <a href="tela14.html" class="nav-link">💲 14. Controle Financeiro</a>
+            <a href="tela15.html" class="nav-link">☑ 15. Checklist da Mala</a>
+            <a href="tela16.html" class="nav-link">👤 16. Minha Conta</a>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Cabeçalho da página -->
+    <div class="main-content">
+      <header class="topbar">
+        <div class="topbar__info">
+          <span class="screen-indicator">Tela 4 de 16</span>
+          <h1 class="topbar__title">4. Sugestões Destinos</h1>
+        </div>
+        <!-- Ações do Cabeçalho (próxima e anterior)-->
+        <div class="topbar-actions">
+          <a href="tela3.html" class="btn-nav" style="text-decoration: none;">Anterior  ›</a>
+          <a href="tela5.html" class="btn-nav primary" style="text-decoration: none;">Próxima ›</a>
+        </div>
+      </header>
+
+      <!-- Corpo Principal -->
+      <main style="background-color: #f3f4f6; padding: 32px; min-height: 100vh; font-family: sans-serif;">
+        <section style="background-color: #ffffff; border-radius: 12px; padding: 40px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); max-width: 1000px; margin: 0 auto;">
+            
+            <!-- Cabeçalho do Conteúdo -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px;">
+                <div>
+                    <span style="color: #0d9488; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">PASSO 3 DE 3</span>
+                    <h3 style="font-size: 24px; font-weight: 700; color: #111827; margin: 8px 0 4px 0;">Sugestões de Destinos Recomendados</h3>
+                    <p style="font-size: 14px; color: #6b7280; margin: 0;">Com base nas suas preferências: <strong style="color: #374151;">Neve & Frio</strong>
+                </div>
+                <a href="tela5.html" class="btn-dark" style="background-color: #111827; color: #ffffff; border: none; border-radius: 6px; padding: 12px 20px; font-size: 13px; font-weight: 600; text-decoration: none; display: inline-block;">
+                    Ir para Pesquisa de Passagens >
+                </a>
+            </div>
+
+            <!-- Grid de Destinos -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+                
+                <!-- CARD 1 -->
+                <div class="card" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; cursor: pointer; background: #fff;">
+                    <div style="height: 180px; position: relative; background-color: #cbd5e1;">
+                    <img class="card__image" src="../imagens/Phuket.PNG" alt="Phuket, Tailândia" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        <span style="position: absolute; top: 12px; right: 12px; background-color: #0d9488; color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">98% Compatível</span>
+                    </div>
+                    <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+                        <div style="font-size: 10px; text-transform: uppercase; color: #9ca3af; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 4px;">Tailândia</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 8px;">Phuket</div>
+                        <div style="font-size: 13px; color: #6b7280; line-height: 1.5; margin-bottom: 24px; flex: 1;">Perfeito para relaxar na praia, explorar a cultura local e desfrutar de uma gastronomia deliciosa.</div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 16px;">
+                            <div>
+                                <div style="font-size: 11px; color: #9ca3af;">Estimativa total</div>
+                                <div style="font-size: 16px; font-weight: 700; color: #0d9488;">R$ 10.200</div>
+                            </div>
+                            <a href="tela5.html" class="select-link" style="color: #0d9488; text-decoration: none; font-size: 13px; font-weight: 600;">Selecionar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; cursor: pointer; background: #fff;">
+                    <div style="height: 180px; position: relative; background-color: #cbd5e1;">
+                        <img class="card__image" src="../imagens/Barioche2.PNG" alt="Bariloche, Argentina" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        <span style="position: absolute; top: 12px; right: 12px; background-color: #0d9488; color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">92% Compatível</span>
+                    </div>
+                    <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+                        <div style="font-size: 10px; text-transform: uppercase; color: #9ca3af; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 4px;">Argentina</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 8px;">Bariloche & Lagos</div>
+                        <div style="font-size: 13px; color: #6b7280; line-height: 1.5; margin-bottom: 24px; flex: 1;">Estações de esqui fantásticas, chocolates artesanais e belíssimas paisagens.</div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 16px;">
+                            <div>
+                                <div style="font-size: 11px; color: #9ca3af;">Estimativa total</div>
+                                <div style="font-size: 16px; font-weight: 700; color: #0d9488;">R$ 3.400</div>
+                            </div>
+                            <a href="tela5.html" class="select-link" style="color: #0d9488; text-decoration: none; font-size: 13px; font-weight: 600;">Selecionar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; cursor: pointer; background: #fff;">
+                    <div style="height: 180px; position: relative; background-color: #cbd5e1;">
+                        <img class="card__image" src="../imagens/Paris.PNG" alt="Paris, França" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        <span style="position: absolute; top: 12px; right: 12px; background-color: #0d9488; color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">87% Compatível</span>
+                    </div>
+                    <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+                        <div style="font-size: 10px; text-transform: uppercase; color: #9ca3af; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 4px;">França</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 8px;">Paris</div>
+                        <div style="font-size: 13px; color: #6b7280; line-height: 1.5; margin-bottom: 24px; flex: 1;">A cidade da luz, conhecida por sua arquitetura icônica, museus renomados e cultura vibrante.</div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 16px;">
+                            <div>
+                                <div style="font-size: 11px; color: #9ca3af;">Estimativa total</div>
+                                <div style="font-size: 16px; font-weight: 700; color: #0d9488;">R$ 6.800</div>
+                            </div>
+                            <a href="tela5.html" class="select-link" style="color: #0d9488; text-decoration: none; font-size: 13px; font-weight: 600;">Selecionar</a>
+                        </div>
+                         </div>
+                          </div>
+
+                        <!-- CARD 4 -->
+                <div class="card" style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; cursor: pointer; background: #fff;">
+                    <div style="height: 180px; position: relative; background-color: #cbd5e1;">
+                        <img class="card__image" src="../imagens/Nepal.PNG" alt="Nepal" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        <span style="position: absolute; top: 12px; right: 12px; background-color: #0d9488; color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">87% Compatível</span>
+                    </div>
+                    <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+                        <div style="font-size: 10px; text-transform: uppercase; color: #9ca3af; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 4px;">Nepal</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 8px;">Kathmandu</div>
+                        <div style="font-size: 13px; color: #6b7280; line-height: 1.5; margin-bottom: 24px; flex: 1;">A capital da cultura e da natureza exuberante do Nepal.</div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f3f4f6; padding-top: 16px;">
+                            <div>
+                                <div style="font-size: 11px; color: #9ca3af;">Estimativa total</div>
+                                <div style="font-size: 16px; font-weight: 700; color: #0d9488;">R$ 6.800</div>
+                            </div>
+                            <a href="tela5.html" class="select-link" style="color: #0d9488; text-decoration: none; font-size: 13px; font-weight: 600;">Selecionar</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  
+
+</body>
+</html>
