@@ -1,8 +1,10 @@
 // Passagens.tsx
-import { useMemo, useState } from "react";
-import { Filter } from "lucide-react";
-import AppLayout from "./AppLayout";
+import React from 'react';
+import '../components/Card/Card.css';
+import '../components/Grid/Grid.css';
+import '../styles/botoes.css';
 
+export function Page05({ onMudarTela }: { onMudarTela: (tela: number) => void }) 
 interface Flight {
   id: string;
   code: string;
@@ -31,7 +33,7 @@ interface Props {
   onSelectFlight?: (flight: Flight) => void;
 }
 
-export default function FlightSearchScreen({ onPrev, onNext, onNavigate, onSelectFlight }: Props) {
+export default function Buscadepassagens({ onPrev, onNext, onNavigate, onSelectFlight }: Props) {
   const [maxPrice, setMaxPrice] = useState(6000);
   const [direct, setDirect] = useState(true);
   const [oneStop, setOneStop] = useState(true);

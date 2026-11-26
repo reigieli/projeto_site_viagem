@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Sidebar } from './components/Sidebar/Sidebar';
-import { Page05 } from './pages/page05';
-Import { Page06 } from './pages/page06';
-Import { Page07 } from './pages/page07';
-Import { Page08 } from './pages/page08';
+import { Buscadepassagens } from './pages/page05';
+import { Comparacaodepassagens} from './pages/page06';
+import { Hospedagem } from './pages/page07';
+import { Passeios } from './pages/page08';
 import { Page09 } from './pages/page09';
 import { Page10 } from './pages/page10';
 import { Page11 } from './pages/page11';
@@ -60,7 +60,7 @@ export function App() {
               Próxima →
             </button>
           </div>
-        </header>
+        </header>                                                                                                                                                                                                                                                   
 
         <main className="content-body">
           {telaAtual === 9 && <Page09 onMudarTela={setTelaAtual} />}

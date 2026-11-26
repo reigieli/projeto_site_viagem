@@ -1,8 +1,10 @@
 // Comparacao de passagens.tsx
-import { useState } from "react";
-import { Star } from "lucide-react";
-import AppLayout from "./AppLayout";
+import React from 'react';
+import '../components/Card/Card.css';
+import '../components/Grid/Grid.css';
+import '../styles/botoes.css';
 
+export function Page06({ onMudarTela }: { onMudarTela: (tela: number) => void })
 const OPTIONS = [
   { id: "qatar", name: "Qatar", label: "Opção 1 (Qatar)", recommended: true, price: 5200, duration: "18h 45m", durationNote: "(Mais rápido)", layover: "Doha (2h de espera)", baggage: "2 malas (23kg cada)", bags: 2, rating: 4.9 },
   { id: "emirates", name: "Emirates", label: "Opção 2 (Emirates)", recommended: false, price: 4950, duration: "20h 15m", durationNote: "", layover: "Dubai (3h 30m de espera)", baggage: "2 malas (23kg cada)", bags: 2, rating: 4.8 },
@@ -19,7 +21,7 @@ interface Props {
   onChoose?: (optionId: string) => void;
 }
 
-export default function FlightCompareScreen({ onPrev, onNext, onNavigate, onChoose }: Props) {
+export default function Comparacaodepassagens({ onPrev, onNext, onNavigate, onChoose }: Props) {
   const [chosen, setChosen] = useState<string | null>(null);
 
   const choose = (id: string) => {

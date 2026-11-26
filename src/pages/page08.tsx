@@ -1,8 +1,10 @@
 // Passeios.tsx
-import { useState } from "react";
-import { Check } from "lucide-react";
-import AppLayout from "./AppLayout";
+import React from 'react';
+import '../components/Card/Card.css';
+import '../components/Grid/Grid.css';
+import '../styles/botoes.css';
 
+export function Page08({ onMudarTela }: { onMudarTela: (tela: number) => void })
 const TOURS = [
   { id: "everest", title: "Trekking ao Acampamento Base do Everest (Voo de Helicóptero)", duration: "1 dia inteiro", description: "Sobrevoo espetacular pelos picos mais altos do planeta com parada para café da manhã nas montanhas.", price: 1450 },
   { id: "durbar", title: "Tour Cultural Templos de Kathmandu & Durbar Square", duration: "6 horas", description: "Guia historiador local, entradas para templos sagrados e transporte privado incluídos.", price: 220 },
@@ -18,7 +20,7 @@ interface Props {
   onChange?: (selectedIds: string[]) => void;
 }
 
-export default function ToursScreen({ onPrev, onNext, onNavigate, onChange }: Props) {
+export default function Passeios({ onPrev, onNext, onNavigate, onChange }: Props) {
   const [added, setAdded] = useState<string[]>(["everest"]);
 
   const toggle = (id: string) => {

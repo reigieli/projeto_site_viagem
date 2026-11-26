@@ -1,8 +1,10 @@
 // Hospedagem.tsx
-import { useState } from "react";
-import { Star } from "lucide-react";
-import AppLayout from "./AppLayout";
+import React from 'react';
+import '../components/Card/Card.css';
+import '../components/Grid/Grid.css';
+import '../styles/botoes.css';
 
+export function Page07({ onMudarTela }: { onMudarTela: (tela: number) => void })
 const NIGHTS = 13;
 const HOTELS = [
   { id: "himalayan", name: "Himalayan Boutique Hotel", rating: 4.9, perNight: 280 },
@@ -19,7 +21,7 @@ interface Props {
   onSelectHotel?: (hotelId: string) => void;
 }
 
-export default function LodgingScreen({ onPrev, onNext, onNavigate, onSelectHotel }: Props) {
+export default function Hospedagem({ onPrev, onNext, onNavigate, onSelectHotel }: Props) {
   const [selected, setSelected] = useState("himalayan");
 
   const select = (id: string) => {
