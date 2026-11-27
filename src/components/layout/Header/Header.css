@@ -1,0 +1,31 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 32px;
+  background: white;
+  border-bottom: 1px solid var(--cor-borda);
+}
+.header__alternador {
+  background: white;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  padding: 8px;
+}
+.header__informacoes {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.header__informacoes small {
+  color: var(--cor-texto-secundario);
+}
+.header__perfil {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

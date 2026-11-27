@@ -1,0 +1,26 @@
+.item-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  min-height: 44px;
+  border-radius: 8px;
+  color: var(--cor-texto-secundario);
+  font-size: 0.875rem;
+}
+.item-nav:hover {
+  background: var(--cor-superficie-secundaria);
+}
+.item-nav--ativo {
+  background: var(--cor-primaria-clara);
+  color: var(--cor-primaria-escura);
+  font-weight: 600;
+}
+.item-nav--recolhido {
+  justify-content: center;
+}
+.item-nav__icone {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
