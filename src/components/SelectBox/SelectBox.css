@@ -1,0 +1,14 @@
+.select-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.select-box__entrada {
+  accent-color: var(--cor-primaria-escura);
+  width: 18px;
+  height: 18px;
+}
+.select-box__descricao {
+  display: block;
+  color: var(--cor-texto-secundario);
+}
