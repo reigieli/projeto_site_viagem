@@ -1,0 +1,31 @@
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #e2e8f0;
+  color: #334155;
+}
+.etiqueta--primaria {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+.etiqueta--sucesso {
+  background: #dcfce7;
+  color: #166534;
+}
+.etiqueta--alerta {
+  background: #fef3c7;
+  color: #92400e;
+}
+.etiqueta--perigo {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.etiqueta--informacao {
+  background: #dbeafe;
+  color: #1e40af;
+}
