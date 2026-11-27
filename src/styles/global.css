@@ -1,17 +1,19 @@
 body {
-  font-family:var(--fonte-principal);
-  line-height:1.5;
-  color:var(--cor-texto);
-  background:var(--cor-fundo)
+  font-family: var(--fonte-principal);
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
 }
 :focus-visible {
-  outline:3px solid var(--cor-primaria-escura);
-  outline-offset:3px
+  outline: 3px solid var(--cor-primaria-escura);
+  outline-offset: 3px;
 }
 #root {
-  isolation:isolate
+  isolation: isolate;
 }
 
-*,*::before,*::after {
-  box-sizing:border-box
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

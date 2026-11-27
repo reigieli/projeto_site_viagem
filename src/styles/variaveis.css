@@ -29,8 +29,8 @@
   --sombra-sm: 0 1px 3px #0001;
   --sombra-md: 0 4px 12px #0002;
   --sombra-lg: 0 12px 30px #0002;
-  --fonte-xs: .75rem;
-  --fonte-sm: .875rem;
+  --fonte-xs: 0.75rem;
+  --fonte-sm: 0.875rem;
   --fonte-md: 1rem;
   --fonte-lg: 1.125rem;
   --fonte-xl: 1.25rem;
