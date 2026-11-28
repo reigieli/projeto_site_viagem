@@ -4,8 +4,10 @@ import { Page01 } from './pages/page01';
 import { Page02 } from './pages/page02';
 import { Page03 } from './pages/page03';
 import { Page04 } from './pages/page04';
-import {Page04NEVE} from './pages/page04NEVE';
-import {Page04PRAIA} from './pages/page04PRAIA';  
+import { Page05 } from './pages/page05';
+import { Page06 } from './pages/page06';
+//import { Page07 } from './pages/page07';
+//import { Page08 } from './pages/page08';
 import { Page09 } from './pages/page09';
 import { Page10 } from './pages/page10';
 import { Page11 } from './pages/page11';
@@ -68,9 +70,11 @@ export function App() {
           {telaAtual === 1 && <Page01 onMudarTela={setTelaAtual} />}
           {telaAtual === 2 && <Page02 onMudarTela={setTelaAtual} />}
           {telaAtual === 3 && <Page03 onMudarTela={setTelaAtual} />}
-         {telaAtual === 41 && <Page04PRAIA onMudarTela={setTelaAtual} />}
-          {telaAtual === 42 && <Page04NEVE onMudarTela={setTelaAtual} />}
           {telaAtual === 4 && <Page04 onMudarTela={setTelaAtual} />}
+          {telaAtual === 5 && <Page05 onMudarTela={setTelaAtual} />}
+          {telaAtual === 6 && <Page06 onMudarTela={setTelaAtual} />}
+          {/*{telaAtual === 7 && <Page07 onMudarTela={setTelaAtual} />}*/}
+          {/*{telaAtual === 8 && <Page08 onMudarTela={setTelaAtual} />}*/}
           {telaAtual === 9 && <Page09 onMudarTela={setTelaAtual} />}
           {telaAtual === 10 && <Page10 onMudarTela={setTelaAtual} />}
           {telaAtual === 11 && <Page11 onMudarTela={setTelaAtual} />}
