@@ -1,6 +1,6 @@
 import '../components/Card/Card.css';
 import '../components/Grid/Grid.css';
-import '../styles/botoes.css';
+
 
 
 // 1. Componente do Card de Preferência isolado

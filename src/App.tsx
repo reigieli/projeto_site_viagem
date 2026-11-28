@@ -1,6 +1,14 @@
 import { HashRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import { LayoutPrincipal } from './layouts/LayoutPrincipal/LayoutPrincipal';
 import { caminhos, itensNavegacao } from './constantes/navegacao';
+import { Page01 } from './pages/page01';
+import { Page02 } from './pages/page02';
+import { Page03 } from './pages/page03';
+import { Page04 } from './pages/page04';
+import { Page04PRAIA } from './pages/page04PRAIA';
+import { Page04NEVE } from './pages/page04NEVE';
+import { Page04URBANO } from './pages/page04URBANO';
+import { Page04TRILHA } from './pages/page04TRILHA';
 import FlightSearchScreen from './pages/page05';
 import FlightCompareScreen from './pages/page06';
 import Hospedagem from './pages/page07';
@@ -22,18 +30,53 @@ function Rotas() {
   return (
     <Routes>
       <Route element={<LayoutPrincipal />}>
-        <Route path={caminhos.voos} element={<FlightSearchScreen />} />
+        <Route
+          path={caminhos.inicio}
+          element={<Page01 onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.viagem}
+          element={<Page02 onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.preferencias}
+          element={<Page03 onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.destinos}
+          element={<Page04 onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.destinosPraia}
+          element={<Page04PRAIA onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.destinosNeve}
+          element={<Page04NEVE onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.destinosUrbano}
+          element={<Page04URBANO onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.destinosTrilha}
+          element={<Page04TRILHA onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.voos}
+          element={<FlightSearchScreen onMudarTela={mudarTela} />}
+        />
         <Route
           path={caminhos.compararVoos}
-          element={<FlightCompareScreen onNavigate={mudarTela} />}
+          element={<FlightCompareScreen onMudarTela={mudarTela} />}
         />
         <Route
           path={caminhos.hoteis}
-          element={<Hospedagem onNavigate={mudarTela} />}
+          element={<Hospedagem onMudarTela={mudarTela} />}
         />
         <Route
           path={caminhos.passeios}
-          element={<Passeios onNavigate={mudarTela} />}
+          element={<Passeios onMudarTela={mudarTela} />}
         />
         <Route
           path={caminhos.resumoReserva}
@@ -54,7 +97,7 @@ function Rotas() {
         <Route path={caminhos.financeiro} element={<Financeiro />} />
         <Route path={caminhos.minhaConta} element={<MinhaConta />} />
         {itensNavegacao
-          .filter((_, i) => [0, 1, 2, 3, 12, 14].includes(i))
+          .filter((_, i) => [12, 14].includes(i))
           .map((item) => (
             <Route
               key={item.id}

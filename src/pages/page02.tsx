@@ -1,6 +1,6 @@
 import '../components/Card/Card.css';
 import '../components/Grid/Grid.css';
-import '../styles/botoes.css';
+
 
 
 export function Page02({ onMudarTela }: { onMudarTela: (tela: number) => void }) {
