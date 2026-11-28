@@ -1,0 +1,12 @@
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+}
+.price-row--total {
+  border-top: 1px solid var(--cor-borda);
+  font-size: 1.25rem;
+  color: var(--cor-primaria-escura);
+  margin-top: 8px;
+}

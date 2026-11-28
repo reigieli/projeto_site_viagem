@@ -1,0 +1,36 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: var(--largura-sidebar);
+  background: white;
+  border-right: 1px solid var(--cor-borda);
+}
+.sidebar--recolhida {
+  width: var(--largura-sidebar-recolhida);
+}
+.sidebar__marca {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--cor-borda);
+  flex-shrink: 0;
+}
+.sidebar__navegacao {
+  flex: 1;
+  overflow: auto;
+  padding: 24px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sidebar__rodape {
+  padding: 12px;
+  font-size: 11px;
+  text-align: center;
+  border-top: 1px solid var(--cor-borda);
+}

@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+}
+.logo__imagem {
+  width: 160px;
+}
+.logo__icone {
+  display: grid;
+  place-items: center;
+  background: var(--cor-primaria-escura);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}

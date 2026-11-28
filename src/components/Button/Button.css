@@ -1,0 +1,48 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--raio-md);
+  font-weight: 600;
+  background: var(--cor-primaria-escura);
+  color: white;
+}
+.button--secundario {
+  background: var(--cor-secundaria);
+}
+.button--contorno {
+  background: white;
+  color: var(--cor-primaria-escura);
+  border-color: currentColor;
+}
+.button--perigo {
+  background: var(--cor-perigo);
+}
+.button--pequeno {
+  padding: 6px 10px;
+}
+.button--grande {
+  padding: 14px 20px;
+}
+.button--total {
+  width: 100%;
+}
+.button:disabled {
+  opacity: 0.55;
+}
+.button__giro {
+  animation: button-girar 0.8s linear infinite;
+}
+@keyframes button-girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button__giro {
+    animation: none;
+  }
+}

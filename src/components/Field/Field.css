@@ -1,0 +1,31 @@
+.field {
+  display: grid;
+  gap: 6px;
+}
+.field__rotulo {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.field__entrada {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  color: var(--cor-texto);
+}
+.field__entrada[aria-invalid='true'] {
+  border-color: var(--cor-perigo);
+}
+.field__descricao {
+  font-size: 0.75rem;
+  color: var(--cor-texto-secundario);
+}
+.field__descricao--erro {
+  color: var(--cor-perigo);
+}
+.field__controle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
