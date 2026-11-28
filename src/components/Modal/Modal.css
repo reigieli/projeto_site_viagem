@@ -1,0 +1,28 @@
+.modal {
+  width: min(560px, 90vw);
+  padding: 24px;
+  border: 0;
+  border-radius: 12px;
+  color: var(--cor-texto);
+  box-shadow: var(--sombra-lg);
+}
+.modal::backdrop {
+  background: #0f172a88;
+}
+.modal__cabecalho,
+.modal__rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.modal__corpo {
+  padding: 24px 0;
+}
+.modal__rodape {
+  justify-content: flex-end;
+}
+.modal__fechar {
+  background: none;
+  border: 0;
+}

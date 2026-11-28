@@ -1,0 +1,17 @@
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  color: var(--cor-texto-secundario);
+}
+.divisor::before,
+.divisor::after {
+  content: '';
+  height: 1px;
+  background: var(--cor-borda);
+  flex: 1;
+}
+.divisor__texto {
+  font-size: 0.875rem;
+}

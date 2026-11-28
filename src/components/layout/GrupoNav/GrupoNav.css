@@ -1,0 +1,17 @@
+.grupo-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.grupo-nav__titulo {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--cor-texto-secundario);
+  padding: 0 12px;
+}
+.grupo-nav__lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

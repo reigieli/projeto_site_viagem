@@ -1,0 +1,43 @@
+.barra-progresso {
+  --progresso-cor: #0f766e;
+  --progresso-altura: 10px;
+  display: grid;
+  gap: 8px;
+}
+.barra-progresso__cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+.barra-progresso__entrada {
+  appearance: none;
+  width: 100%;
+  height: var(--progresso-altura);
+  border: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+.barra-progresso__entrada::-webkit-progress-bar {
+  background: #e2e8f0;
+}
+.barra-progresso__entrada::-webkit-progress-value {
+  background: var(--progresso-cor);
+}
+.barra-progresso__entrada::-moz-progress-bar {
+  background: var(--progresso-cor);
+}
+.barra-progresso--sucesso {
+  --progresso-cor: #15803d;
+}
+.barra-progresso--atencao {
+  --progresso-cor: #b45309;
+}
+.barra-progresso--perigo {
+  --progresso-cor: #dc2626;
+}
+.barra-progresso--pequeno {
+  --progresso-altura: 6px;
+}
+.barra-progresso--grande {
+  --progresso-altura: 16px;
+}

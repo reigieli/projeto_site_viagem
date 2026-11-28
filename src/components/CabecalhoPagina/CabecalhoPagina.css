@@ -1,0 +1,27 @@
+.cabecalho-pagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.cabecalho-pagina__identificacao {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.cabecalho-pagina__icone {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #ccfbf1;
+  color: #0f766e;
+}
+.cabecalho-pagina__descricao {
+  color: var(--cor-texto-secundario);
+}
+.cabecalho-pagina__acoes {
+  display: flex;
+  gap: 12px;
+}

@@ -1,0 +1,24 @@
+/* =========================================================
+   BLOCK: PAGE ACTIONS
+   Organiza as ações de navegação e ações complementares.
+   ========================================================= */
+
+.page-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   ELEMENT: NEXT
+   Agrupa as ações complementares e de continuidade.
+   ========================================================= */
+
+.page-actions__next {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}

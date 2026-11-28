@@ -1,0 +1,47 @@
+/* =========================================================
+   BLOCK: DESTINATION CARD
+   Cartão especializado na apresentação de destinos.
+   ========================================================= */
+
+.destination-card__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.destination-card__body {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  flex: 1;
+}
+
+.destination-card__title {
+  font-weight: 600;
+}
+
+.destination-card__description {
+  color: var(--cor-texto-secundario);
+  font-size: 0.875rem;
+}
+
+.destination-card__footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.destination-card__pricing {
+  display: flex;
+  flex-direction: column;
+}
+
+.destination-card__price-label {
+  font-size: 0.875rem;
+}
+
+.destination-card__price {
+  color: var(--cor-primaria-escura);
+}

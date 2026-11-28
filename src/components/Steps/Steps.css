@@ -1,0 +1,44 @@
+.steps {
+  display: flex;
+  list-style: none;
+}
+.steps__item {
+  flex: 1;
+  position: relative;
+}
+.steps__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: calc(50% + 24px);
+  width: calc(100% - 48px);
+  height: 2px;
+  background: #cbd5e1;
+}
+.steps__controle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: none;
+  border: 0;
+  color: inherit;
+  text-align: center;
+}
+.steps__numero {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e2e8f0;
+}
+.steps__item--atual .steps__numero,
+.steps__item--concluida .steps__numero {
+  background: #0f766e;
+  color: white;
+}
+.steps__item--concluida::after {
+  background: #0f766e !important;
+}

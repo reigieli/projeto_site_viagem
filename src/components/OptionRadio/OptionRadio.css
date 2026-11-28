@@ -1,0 +1,27 @@
+.option-radio {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.option-radio--cartao {
+  padding: 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+}
+.option-radio--cartao:has(input:checked) {
+  border-color: var(--cor-primaria-escura);
+}
+.option-radio__entrada {
+  accent-color: var(--cor-primaria-escura);
+}
+.option-radio__descricao {
+  display: block;
+  color: var(--cor-texto-secundario);
+}
+.grupo-radio {
+  display: grid;
+  gap: 10px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
