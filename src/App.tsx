@@ -1,97 +1,83 @@
-import { useState } from 'react';
-import { Sidebar } from './components/Sidebar/Sidebar';
-import { Buscadepassagens } from './pages/page05';
-import { Comparacaodepassagens} from './pages/page06';
-import { Hospedagem } from './pages/page07';
-import { Passeios } from './pages/page08';
+import { HashRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import { LayoutPrincipal } from './layouts/LayoutPrincipal/LayoutPrincipal';
+import { caminhos, itensNavegacao } from './constantes/navegacao';
+import FlightSearchScreen from './pages/page05';
+import FlightCompareScreen from './pages/page06';
+import Hospedagem from './pages/page07';
+import Passeios from './pages/page08';
 import { Page09 } from './pages/page09';
 import { Page10 } from './pages/page10';
 import { Page11 } from './pages/page11';
 import { Page12 } from './pages/page12';
-import './App.css';
+import { Financeiro } from './pages/Financeiro/Financeiro';
+import { MinhaConta } from './pages/MinhaConta/MinhaConta';
 
-export function App() {
-  const [telaAtual, setTelaAtual] = useState(9);
-
-  const nomesDasTelas: { [key: number]: string } = {
-    1: 'Início',
-    2: 'Dados da Viagem',
-    3: 'Preferências',
-    4: 'Sugestões Destinos',
-    5: 'Pesquisa de Voos',
-    6: 'Comparar Voos',
-    7: 'Hospedagem',
-    8: 'Passeios & Tours',
-    9: 'Resumo da Reserva',
-    10: 'Passageiros',
-    11: 'Pagamento',
-    12: 'Confirmação',
-    13: 'Meu Roteiro',
-    14: 'Controle Financeiro',
-    15: 'Checklist da Mala',
-    16: 'Minha Conta',
-  };
+function Rotas() {
+  const navigate = useNavigate();
+  function mudarTela(tela: number) {
+    const item = itensNavegacao[tela - 1];
+    if (item) navigate(item.caminho);
+  }
 
   return (
-    <div className="app-layout">
-      <Sidebar telaAtual={telaAtual} onMudarTela={setTelaAtual} />
+    <Routes>
+      <Route element={<LayoutPrincipal />}>
+        <Route path={caminhos.voos} element={<FlightSearchScreen />} />
+        <Route
+          path={caminhos.compararVoos}
+          element={<FlightCompareScreen onNavigate={mudarTela} />}
+        />
+        <Route
+          path={caminhos.hoteis}
+          element={<Hospedagem onNavigate={mudarTela} />}
+        />
+        <Route
+          path={caminhos.passeios}
+          element={<Passeios onNavigate={mudarTela} />}
+        />
+        <Route
+          path={caminhos.resumoReserva}
+          element={<Page09 onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.passageiros}
+          element={<Page10 onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.pagamento}
+          element={<Page11 onMudarTela={mudarTela} />}
+        />
+        <Route
+          path={caminhos.confirmacao}
+          element={<Page12 onMudarTela={mudarTela} />}
+        />
+        <Route path={caminhos.financeiro} element={<Financeiro />} />
+        <Route path={caminhos.minhaConta} element={<MinhaConta />} />
+        {itensNavegacao
+          .filter((_, i) => [0, 1, 2, 3, 12, 14].includes(i))
+          .map((item) => (
+            <Route
+              key={item.id}
+              path={item.caminho}
+              element={
+                <div className="container">
+                  <h2>{item.rotulo}</h2>
+                  <p>Conteúdo em desenvolvimento.</p>
+                </div>
+              }
+            />
+          ))}
+        <Route path="*" element={<p>Página não encontrada.</p>} />
+      </Route>
+    </Routes>
+  );
+}
 
-      <div className="main-content" style={{ backgroundColor: '#f8fafc' }}>
-        <header className="topbar">
-          <div className="topbar__info">
-            <span className="screen-indicator">
-              Tela {telaAtual} de 16 — {nomesDasTelas[telaAtual]}
-            </span>
-          </div>
-
-          <div className="topbar-actions">
-            <button
-              className="btn-nav"
-              onClick={() => setTelaAtual((t) => Math.max(t - 1, 1))}
-              disabled={telaAtual === 1}
-            >
-              ← Anterior
-            </button>
-            <button
-              className="btn-nav primary"
-              onClick={() => setTelaAtual((t) => Math.min(t + 1, 16))}
-              disabled={telaAtual === 16}
-            >
-              Próxima →
-            </button>
-          </div>
-        </header>                                                                                                                                                                                                                                                   
-
-        <main className="content-body">
-          {telaAtual === 5 && <Buscadepassagens onMudarTela={setTelaAtual} />}
-          {telaAtual === 5 && <Buscadepassagens onMudarTela={setTelaAtual} />}
-          {telaAtual === 6 && <Comparacaodepassagens onMudarTela={setTelaAtual} />}
-          {telaAtual === 7 && <Hospedagem onMudarTela={setTelaAtual} />}
-          {telaAtual === 8 && <Passeios onMudarTela={setTelaAtual} />}
-          {telaAtual === 1 && <Page01 onMudarTela={setTelaAtual} />}
-          {telaAtual === 2 && <Page02 onMudarTela={setTelaAtual} />}
-          {telaAtual === 3 && <Page03 onMudarTela={setTelaAtual} />}
-          {telaAtual === 4 && <Page04 onMudarTela={setTelaAtual} />}
-          {telaAtual === 5 && <Page05 onMudarTela={setTelaAtual} />}
-          {telaAtual === 6 && <Page06 onMudarTela={setTelaAtual} />}
-          {/*{telaAtual === 7 && <Page07 onMudarTela={setTelaAtual} />}*/}
-          {/*{telaAtual === 8 && <Page08 onMudarTela={setTelaAtual} />}*/}
-          {telaAtual === 9 && <Page09 onMudarTela={setTelaAtual} />}
-          {telaAtual === 10 && <Page10 onMudarTela={setTelaAtual} />}
-          {telaAtual === 11 && <Page11 onMudarTela={setTelaAtual} />}
-          {telaAtual === 12 && <Page12 onMudarTela={setTelaAtual} />}
-          
-          {![5, 6, 7, 8, 9, 10, 11, 12].includes(telaAtual) && (
-            <div className="container">
-              <h2>{telaAtual}. {nomesDasTelas[telaAtual]}</h2>
-              <p>Conteúdo em desenvolvimento.</p>
-            </div>
-          )}
-
-        
-        </main>
-      </div>
-    </div>
+export function App() {
+  return (
+    <HashRouter>
+      <Rotas />
+    </HashRouter>
   );
 }
 

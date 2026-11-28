@@ -58,11 +58,6 @@ export interface Despesa {
   description: string;
   value: number;
 }
-export interface ItemBagagem {
-  id: string;
-  label: string;
-  done: boolean;
-}
 export interface Perfil {
   name: string;
   email: string;

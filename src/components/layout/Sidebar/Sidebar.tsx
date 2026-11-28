@@ -1,4 +1,4 @@
-import type { GrupoMenu } from '../../../types/navegacao.tipos';
+import type { GrupoMenu } from '../../../tipos/navegacao.tipos';
 import { Logo } from '../Logo/Logo';
 import { GrupoNav } from '../GrupoNav/GrupoNav';
 import './Sidebar.css';

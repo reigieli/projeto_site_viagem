@@ -91,13 +91,7 @@ export default function Passeios({ onPrev, onNext, onNavigate, onChange }: Props
   };
 
   return (
-    <AppLayout
-      currentStep={8}
-      title="Passeios & Tours"
-      onPrev={onPrev}
-      onNext={onNext}
-      onNavigate={onNavigate}
-    >
+    <div>
       <div className="flex items-start justify-between">
         <div>
           <h2 className="text-xl font-bold">

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import type { ItemMenu } from '../../../types/navegacao.tipos';
+import type { ItemMenu } from '../../../tipos/navegacao.tipos';
 import './ItemNav.css';
 
 export interface ItemNavProps {

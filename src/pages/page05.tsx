@@ -152,13 +152,7 @@ export default function FlightSearchScreen({
   const checkbox = 'h-4 w-4 rounded border-slate-300 accent-teal-600';
 
   return (
-    <AppLayout
-      currentStep={5}
-      title="Pesquisa de Voos"
-      onPrev={onPrev}
-      onNext={onNext}
-      onNavigate={onNavigate}
-    >
+    <div>
       <h2 className="text-xl font-bold">5. Pesquisa de Passagens Aéreas</h2>
       <p className="text-xs text-slate-500">
         Voos encontrados para: <b>São Paulo (GRU) ➔ Kathmandu (KTM)</b>

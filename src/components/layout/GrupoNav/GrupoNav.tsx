@@ -1,5 +1,5 @@
 import './GrupoNav.css';
-import type { GrupoMenu } from '../../../types/navegacao.tipos';
+import type { GrupoMenu } from '../../../tipos/navegacao.tipos';
 import { ItemNav } from '../ItemNav/ItemNav';
 
 export interface GrupoNavProps {

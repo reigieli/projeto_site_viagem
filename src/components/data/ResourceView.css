@@ -1,9 +1,0 @@
-/* Agrupa o feedback de consulta e o conteúdo da tela. */
-.resource-view {
-  display: grid;
-  gap: 12px;
-  min-width: 0;
-}
-.resource-view__content {
-  min-width: 0;
-}

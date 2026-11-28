@@ -86,13 +86,7 @@ export default function FlightCompareScreen({
   const rowLabel = `${cell} font-medium text-slate-800`;
 
   return (
-    <AppLayout
-      currentStep={6}
-      title="Comparar Voos"
-      onPrev={onPrev}
-      onNext={onNext}
-      onNavigate={onNavigate}
-    >
+    <div>
       <div className="flex items-start justify-between">
         <div>
           <h2 className="text-xl font-bold">6. Tabela Comparativa de Voos</h2>
