@@ -1,26 +1,26 @@
 import { NavLink } from 'react-router-dom';
-import type { ItemMenu } from '../../../types/navegacao.types';
+import type { ItemMenu } from '../../../types/navegacao.tipos';
 import './ItemNav.css';
 
 export interface ItemNavProps {
   item: ItemMenu;
   ativo: boolean;
-  recolhido: boolean;
 }
-export function ItemNav({ item, ativo, recolhido }: Readonly<ItemNavProps>) {
+
+/** Link semântico com destaque para a rota atual. */
+export function ItemNav({ item, ativo }: Readonly<ItemNavProps>) {
   const Icone = item.icone;
   return (
     <NavLink
       to={item.caminho}
       end
       aria-label={item.rotulo}
-      title={recolhido ? item.rotulo : undefined}
       className={({ isActive }) =>
-        `item-navegacao${isActive || ativo ? ' item-navegacao--ativo' : ''}${recolhido ? ' item-navegacao--recolhido' : ''}`
+        `item-nav${isActive || ativo ? ' item-nav--ativo' : ''}`
       }
     >
-      <Icone className="item-navegacao__icone" aria-hidden />
-      {!recolhido && <span>{item.rotulo}</span>}
+      <Icone className="item-nav__icone" aria-hidden />
+      <span>{item.rotulo}</span>
     </NavLink>
   );
 }

@@ -1,12 +1,12 @@
-.field {
+.campo {
   display: grid;
   gap: 6px;
 }
-.field__rotulo {
+.campo__rotulo {
   font-weight: 600;
   font-size: 0.875rem;
 }
-.field__entrada {
+.campo__entrada {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #cbd5e1;
@@ -14,18 +14,75 @@
   background: white;
   color: var(--cor-texto);
 }
-.field__entrada[aria-invalid='true'] {
+.campo__entrada[aria-invalid='true'] {
   border-color: var(--cor-perigo);
 }
-.field__descricao {
+.campo__descricao {
   font-size: 0.75rem;
   color: var(--cor-texto-secundario);
 }
-.field__descricao--erro {
+.campo__descricao--erro {
   color: var(--cor-perigo);
 }
-.field__controle {
+.campo__controle {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.campo,
+.campo__controle,
+.campo__entrada {
+  min-width: 0;
+}
+.campo__entrada {
+  box-sizing: border-box;
+  font: inherit;
+}
+.campo__entrada:focus-visible {
+  outline: 2px solid #0d9488;
+  outline-offset: 2px;
+}
+.campo__entrada:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  background: #f1f5f9;
+}
+textarea.campo__entrada {
+  resize: vertical;
+  min-height: 80px;
+}
+select.campo__entrada[multiple] {
+  min-height: 105px;
+}
+.campo--inline .campo__controle {
+  align-items: center;
+  justify-content: flex-start;
+}
+.campo--inline .campo__entrada {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  flex: 0 0 16px;
+  accent-color: #0d9488;
+}
+.campo--inline .campo__rotulo {
+  cursor: pointer;
+}
+.campo__entrada[type='range'] {
+  accent-color: #0d9488;
+  padding: 0;
+  border: none;
+}
+.campo__entrada[type='file'] {
+  font-size: 13px;
+}
+.campo__entrada[type='file']::file-selector-button {
+  border: 0;
+  background: #e3f3f0;
+  color: #0f766e;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin-right: 8px;
+  cursor: pointer;
 }

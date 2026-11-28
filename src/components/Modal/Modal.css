@@ -26,3 +26,15 @@
   background: none;
   border: 0;
 }
+
+/* Formulários extensos continuam acessíveis em telas pequenas. */
+.modal {
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+}
+.modal__rodape {
+  flex-wrap: wrap;
+}
+.modal__corpo {
+  min-width: 0;
+}

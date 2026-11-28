@@ -29,18 +29,18 @@ export function Table<T>({
   compacta = false,
 }: Readonly<TableProps<T>>) {
   return (
-    <div className="tabela">
+    <div className="table">
       <table
-        className={`tabela__estrutura ${listrada ? 'tabela__estrutura--listrada' : ''} ${compacta ? 'tabela__estrutura--compacta' : ''}`}
+        className={`table__estrutura ${listrada ? 'table__estrutura--listrada' : ''} ${compacta ? 'table__estrutura--compacta' : ''}`}
       >
-        <caption className="tabela__titulo">{titulo}</caption>
+        <caption className="table__titulo">{titulo}</caption>
         <thead>
           <tr>
             {colunas.map((c) => (
               <th
                 key={c.id}
                 scope="col"
-                className={`tabela__celula tabela__celula--${c.alinhamento ?? 'esquerda'}`}
+                className={`table__celula table__celula--${c.alinhamento ?? 'esquerda'}`}
               >
                 {c.titulo}
               </th>
@@ -54,7 +54,7 @@ export function Table<T>({
                 {colunas.map((c) => (
                   <td
                     key={c.id}
-                    className={`tabela__celula tabela__celula--${c.alinhamento ?? 'esquerda'}`}
+                    className={`table__celula table__celula--${c.alinhamento ?? 'esquerda'}`}
                   >
                     {c.renderizar(r)}
                   </td>
@@ -65,7 +65,7 @@ export function Table<T>({
             <tr>
               <td
                 colSpan={Math.max(1, colunas.length)}
-                className="tabela__vazia"
+                className="table__vazia"
               >
                 {mensagemVazia}
               </td>

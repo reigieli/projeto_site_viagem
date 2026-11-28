@@ -10,7 +10,7 @@
 }
 
 /*Variação de sucesso (selos verdes de compatibilidade ou "Adicionado")*/
-.badge-success {
+.badge--sucesso {
   background-color: #d1fae5; /*Fundo verde bem claro*/
   color: #065f46; /*Texto verde escuro*/
 }

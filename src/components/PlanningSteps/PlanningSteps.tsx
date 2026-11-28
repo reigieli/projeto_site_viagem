@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Steps } from '../Steps/Steps';
-import { paths } from '../../constants/navegacao';
+import { caminhos } from '../../constantes/navegacao';
 
 export interface PlanningStepsProps {
   step: string;
@@ -9,15 +9,15 @@ export interface PlanningStepsProps {
 /** Etapas disponíveis no planejamento da viagem. */
 const planningSteps = [
   {
-    id: paths.trip,
+    id: caminhos.viagem,
     titulo: 'Dados da viagem',
   },
   {
-    id: paths.preferences,
+    id: caminhos.preferencias,
     titulo: 'Preferências',
   },
   {
-    id: paths.destinations,
+    id: caminhos.destinos,
     titulo: 'Sugestões',
   },
 ];

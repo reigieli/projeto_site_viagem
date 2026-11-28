@@ -24,13 +24,13 @@ export function Steps({
 }: Readonly<StepsProps>) {
   const atual = etapas.findIndex((e) => e.id === etapaAtualId);
   return (
-    <ol className="indicador-etapas" aria-label={rotulo}>
+    <ol className="steps" aria-label={rotulo}>
       {etapas.map((e, i) => {
         const estado =
           i < atual ? 'concluida' : i === atual ? 'atual' : 'pendente';
         const conteudo = (
           <>
-            <span className="indicador-etapas__numero" aria-hidden="true">
+            <span className="steps__numero" aria-hidden="true">
               {estado === 'concluida' ? <Check size={18} /> : i + 1}
             </span>
             <strong>{e.titulo}</strong>
@@ -48,18 +48,18 @@ export function Steps({
           <li
             key={e.id}
             aria-current={estado === 'atual' ? 'step' : undefined}
-            className={`indicador-etapas__item indicador-etapas__item--${estado}`}
+            className={`steps__item steps__item--${estado}`}
           >
             {estado === 'concluida' && aoSelecionarEtapa ? (
               <button
                 type="button"
-                className="indicador-etapas__controle"
+                className="steps__controle"
                 onClick={() => aoSelecionarEtapa(e.id)}
               >
                 {conteudo}
               </button>
             ) : (
-              <div className="indicador-etapas__controle">{conteudo}</div>
+              <div className="steps__controle">{conteudo}</div>
             )}
           </li>
         );

@@ -16,12 +16,12 @@ export function CaixaSelecao({
   ...props
 }: Readonly<SelectBoxProps>) {
   return (
-    <label className="caixa-selecao">
-      <input {...props} type="checkbox" className="caixa-selecao__entrada" />
+    <label className="select-box">
+      <input {...props} type="checkbox" className="select-box__entrada" />
       <span>
         {rotulo}
         {descricao && (
-          <small className="caixa-selecao__descricao">{descricao}</small>
+          <small className="select-box__descricao">{descricao}</small>
         )}
       </span>
     </label>
