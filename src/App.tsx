@@ -63,12 +63,17 @@ export function App() {
         </header>                                                                                                                                                                                                                                                   
 
         <main className="content-body">
+          {telaAtual === 5 && <Buscadepassagens onMudarTela={setTelaAtual} />}
+          {telaAtual === 5 && <Buscadepassagens onMudarTela={setTelaAtual} />}
+          {telaAtual === 6 && <Comparacaodepassagens onMudarTela={setTelaAtual} />}
+          {telaAtual === 7 && <Hospedagem onMudarTela={setTelaAtual} />}
+          {telaAtual === 8 && <Passeios onMudarTela={setTelaAtual} />}
           {telaAtual === 9 && <Page09 onMudarTela={setTelaAtual} />}
           {telaAtual === 10 && <Page10 onMudarTela={setTelaAtual} />}
           {telaAtual === 11 && <Page11 onMudarTela={setTelaAtual} />}
           {telaAtual === 12 && <Page12 onMudarTela={setTelaAtual} />}
           
-          {telaAtual !== 9 && telaAtual !== 10 && telaAtual !== 11 && telaAtual !== 12 && (
+          {![5, 6, 7, 8, 9, 10, 11, 12].includes(telaAtual) && (
             <div className="container">
               <h2>{telaAtual}. {nomesDasTelas[telaAtual]}</h2>
               <p>Conteúdo em desenvolvimento.</p>
