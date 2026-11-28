@@ -1,6 +1,5 @@
 import '../components/Card/Card.css';
 import '../components/Grid/Grid.css';
-import '../styles/botoes.css';
 // Mantenha aqui os imports dos seus arquivos CSS adicionais, se necessário.
 // import '../ArquivosCSS/reset.css';
 // import '../ArquivosCSS/sidebar.css';

@@ -1,6 +1,6 @@
 import { LoaderCircle } from 'lucide-react';
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
-import './button.css';
+import './Button.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variante?: 'primario' | 'secundario' | 'contorno' | 'perigo';

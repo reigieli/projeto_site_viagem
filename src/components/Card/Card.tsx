@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import './Cartao.css';
+import './Card.css';
 
 export interface CardProps {
   children: ReactNode;
@@ -15,9 +15,9 @@ export function Card({
   className = '',
 }: Readonly<CardProps>) {
   const classes = [
-    'cartao',
-    `cartao--${variante}`,
-    semEspacamento && 'cartao--sem-espacamento',
+    'card',
+    `card--${variante}`,
+    semEspacamento && 'card--sem-espacamento',
     className,
   ]
     .filter(Boolean)
@@ -29,15 +29,15 @@ export function Card({
 export function CardCabecalho({
   children,
 }: Readonly<Pick<CardProps, 'children'>>) {
-  return <div className="cartao__cabecalho">{children}</div>;
+  return <div className="card__cabecalho">{children}</div>;
 }
 
 export function CardCorpo({ children }: Readonly<Pick<CardProps, 'children'>>) {
-  return <div className="cartao__corpo">{children}</div>;
+  return <div className="card__corpo">{children}</div>;
 }
 
 export function CardRodape({
   children,
 }: Readonly<Pick<CardProps, 'children'>>) {
-  return <div className="cartao__rodape">{children}</div>;
+  return <div className="card__rodape">{children}</div>;
 }

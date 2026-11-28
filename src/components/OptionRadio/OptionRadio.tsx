@@ -26,18 +26,18 @@ export function OpcaoRadio({
   ...props
 }: Readonly<OptionRadioProps>) {
   return (
-    <label className={`opcao-radio opcao-radio--${variante}`}>
+    <label className={`option-radio option-radio--${variante}`}>
       <input
         {...props}
         type="radio"
         name={nome}
         value={valor}
-        className="opcao-radio__entrada"
+        className="option-radio__entrada"
       />
       <span>
         {rotulo}
         {descricao && (
-          <small className="opcao-radio__descricao">{descricao}</small>
+          <small className="option-radio__descricao">{descricao}</small>
         )}
       </span>
     </label>

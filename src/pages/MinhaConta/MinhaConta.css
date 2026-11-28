@@ -1,0 +1,15 @@
+.account-page {
+  display: grid;
+  gap: 24px;
+}
+
+.account-page__muted {
+  color: var(--cor-texto-secundario);
+  font-size: 0.875rem;
+}
+
+.account-page__profile {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}

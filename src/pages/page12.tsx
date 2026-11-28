@@ -1,6 +1,5 @@
 import React from 'react';
 import '../components/Card/Card.css';
-import '../styles/botoes.css';
 
 interface Page12Props {
   onMudarTela: (tela: number) => void;

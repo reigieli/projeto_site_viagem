@@ -10,12 +10,6 @@
   background: white;
   border-bottom: 1px solid var(--cor-borda);
 }
-.header__alternador {
-  background: white;
-  border: 1px solid var(--cor-borda);
-  border-radius: 8px;
-  padding: 8px;
-}
 .header__informacoes {
   display: flex;
   flex: 1;

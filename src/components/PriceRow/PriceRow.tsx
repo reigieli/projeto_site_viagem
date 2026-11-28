@@ -1,3 +1,4 @@
+import { formatarMoeda } from '../../utils/formatacao';
 import './PriceRow.css';
 
 export function PriceRow({
@@ -12,7 +13,7 @@ export function PriceRow({
   return (
     <div className={`price-row${total ? ' price-row--total' : ''}`}>
       <span>{label}</span>
-      <strong>{money(value)}</strong>
+      <strong>{formatarMoeda(value)}</strong>
     </div>
   );
 }

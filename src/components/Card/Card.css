@@ -13,11 +13,6 @@
 .card--selecionado {
   border-color: var(--cor-primaria-escura);
 }
-.cartao--sem-espacamento {
-  padding: 0;
-  gap: 0;
-  overflow: hidden;
-}
 .card__cabecalho,
 .card__rodape {
   display: flex;
@@ -34,4 +29,10 @@
   .card {
     padding: 14px;
   }
+}
+
+.card--sem-espacamento {
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
 }

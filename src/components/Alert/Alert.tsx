@@ -18,18 +18,18 @@ export function Alert({
 }: Readonly<AlertProps>) {
   return (
     <div
-      className={`alerta alerta--${variante}`}
+      className={`alert alert--${variante}`}
       role={variante === 'perigo' ? 'alert' : 'status'}
     >
       <Info size={20} />
-      <div className="alerta__conteudo">
+      <div className="alert__conteudo">
         {titulo && <strong>{titulo}</strong>}
         <div>{children}</div>
       </div>
       {aoFechar && (
         <button
           type="button"
-          className="alerta__fechar"
+          className="alert__fechar"
           aria-label="Fechar alerta"
           onClick={aoFechar}
         >

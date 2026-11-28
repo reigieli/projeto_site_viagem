@@ -1,0 +1,33 @@
+/* BLOCK: financeiro-PAGE
+   Composição visual específica da página financeiro. */
+
+.finance-page {
+  display: grid;
+  gap: 24px;
+}
+
+.finance-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.finance-page__number {
+  font-size: 1.7rem;
+  color: var(--cor-primaria-escura);
+}
+
+.finance-page__budget-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.finance-page__budget-edit {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 12px;
+}

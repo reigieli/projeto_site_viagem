@@ -1,6 +1,6 @@
-export type TravelStyle = 'beach' | 'snow' | 'urban' | 'adventure';
+export type EstiloViagem = 'beach' | 'snow' | 'urban' | 'adventure';
 
-export interface Destination {
+export interface Destino {
   id: string;
   city: string;
   country: string;
@@ -8,11 +8,11 @@ export interface Destination {
   image: string;
   price: number;
   description: string;
-  style: TravelStyle;
+  style: EstiloViagem;
   match: number;
 }
 
-export interface Flight {
+export interface Voo {
   id: string;
   airline: string;
   code: string;
@@ -31,41 +31,36 @@ export interface Hotel {
   rating: number;
   nightly: number;
 }
-export interface Tour {
+export interface Passeio {
   id: string;
   title: string;
   duration: string;
   description: string;
   price: number;
 }
-export interface Passenger {
+export interface Passageiro {
   name: string;
   passport: string;
   birth: string;
   email: string;
 }
-export interface Trip {
+export interface Viagem {
   origin: string;
   destination: string;
   departure: string;
   returnDate: string;
   passengers: number;
   purpose: string;
-  style: TravelStyle;
+  style: EstiloViagem;
 }
-export interface Expense {
+export interface Despesa {
   id: string;
   description: string;
   value: number;
 }
-export interface ChecklistItem {
-  id: string;
-  label: string;
-  done: boolean;
-}
-export interface Profile {
+export interface Perfil {
   name: string;
   email: string;
   phone: string;
 }
-export type PaymentMethod = 'card' | 'pix' | 'boleto';
+export type MetodoPagamento = 'card' | 'pix' | 'boleto';

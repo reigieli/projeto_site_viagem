@@ -1,13 +1,13 @@
 import './DestinationCard.css';
-import type { Destination } from '../../types/travel';
+import type { Destino } from '../../types/viagem';
 import { Button } from '../Button/Button';
 import { Card } from '../Card/Card';
 import { Etiqueta } from '../Etiqueta/Etiqueta';
-import { imageUrl, money } from '../../utils/format';
+import { obterUrlImagem, formatarMoeda } from '../../utils/formatacao';
 
 /** Propriedades do cartão de destino. */
 export interface DestinationCardProps {
-  destination: Destination;
+  destination: Destino;
   onSelect: () => void;
   recommended?: boolean;
   selected?: boolean;
@@ -28,7 +28,7 @@ export function DestinationCard({
     >
       <img
         className="destination-card__image"
-        src={imageUrl(destination.image)}
+        src={obterUrlImagem(destination.image)}
         alt={`${destination.city}, ${destination.country}`}
       />
 
@@ -54,7 +54,7 @@ export function DestinationCard({
             </small>
 
             <strong className="destination-card__price">
-              {money(destination.price)}
+              {formatarMoeda(destination.price)}
             </strong>
           </div>
 

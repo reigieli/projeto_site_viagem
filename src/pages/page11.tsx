@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../components/Card/Card.css';
 import '../components/Formulario/Formulario.css';
-import '../styles/botoes.css';
 
 interface Page11Props {
   onMudarTela: (tela: number) => void;

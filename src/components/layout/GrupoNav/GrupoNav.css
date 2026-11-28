@@ -4,14 +4,16 @@
   gap: 8px;
 }
 .grupo-nav__titulo {
-  font-size: 0.75rem;
+  font-size: 11px;
   text-transform: uppercase;
-  color: var(--cor-texto-secundario);
-  padding: 0 12px;
+  letter-spacing: 0.5px;
+  color: var(--cor-menu-titulo, var(--cor-texto-secundario));
+  padding-left: 8px;
+  font-weight: 700;
 }
 .grupo-nav__lista {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }

@@ -15,51 +15,50 @@ import {
   Wallet,
   Luggage,
   UserRound,
+  LayoutGrid,
 } from 'lucide-react';
-
-import type { GrupoMenu } from '../types/navegacao.types';
-
-export const paths = {
-  home: '/',
-  trip: '/trip',
-  preferences: '/preferences',
-  destinations: '/destinations',
-  flights: '/flights',
-  compare: '/flights/compare',
-  hotels: '/hotels',
-  tours: '/tours',
-  summary: '/booking/summary',
-  passengers: '/booking/passengers',
-  payment: '/booking/payment',
-  confirmation: '/booking/confirmation',
-  itinerary: '/itinerary',
-  finance: '/finance',
-  checklist: '/checklist',
-  account: '/account',
+import type { GrupoMenu } from '../types/navegacao.tipos';
+export const caminhos = {
+  inicio: '/',
+  viagem: '/trip',
+  preferencias: '/preferences',
+  destinos: '/destinations',
+  voos: '/flights',
+  compararVoos: '/flights/compare',
+  hoteis: '/hotels',
+  passeios: '/tours',
+  resumoReserva: '/booking/summary',
+  passageiros: '/booking/passengers',
+  pagamento: '/booking/payment',
+  confirmacao: '/booking/confirmation',
+  roteiro: '/itinerary',
+  financeiro: '/finance',
+  listaBagagem: '/checklist',
+  minhaConta: '/account',
+  sistemaDesign: '/design-system',
 } as const;
-
 export const GRUPOS_NAVEGACAO: GrupoMenu[] = [
   {
     id: 'planning',
     titulo: 'Planejamento',
     itens: [
-      { id: 'home', rotulo: 'Início', caminho: paths.home, icone: House },
+      { id: 'home', rotulo: 'Início', caminho: caminhos.inicio, icone: House },
       {
         id: 'trip',
         rotulo: 'Dados da viagem',
-        caminho: paths.trip,
+        caminho: caminhos.viagem,
         icone: MapPin,
       },
       {
         id: 'preferences',
         rotulo: 'Preferências',
-        caminho: paths.preferences,
+        caminho: caminhos.preferencias,
         icone: SlidersHorizontal,
       },
       {
         id: 'destinations',
         rotulo: 'Sugestões de destinos',
-        caminho: paths.destinations,
+        caminho: caminhos.destinos,
         icone: Compass,
       },
     ],
@@ -71,25 +70,25 @@ export const GRUPOS_NAVEGACAO: GrupoMenu[] = [
       {
         id: 'flights',
         rotulo: 'Pesquisa de voos',
-        caminho: paths.flights,
+        caminho: caminhos.voos,
         icone: Plane,
       },
       {
         id: 'compare',
         rotulo: 'Comparar voos',
-        caminho: paths.compare,
+        caminho: caminhos.compararVoos,
         icone: ArrowLeftRight,
       },
       {
         id: 'hotels',
         rotulo: 'Hospedagem',
-        caminho: paths.hotels,
+        caminho: caminhos.hoteis,
         icone: Hotel,
       },
       {
         id: 'tours',
         rotulo: 'Passeios & tours',
-        caminho: paths.tours,
+        caminho: caminhos.passeios,
         icone: Ticket,
       },
     ],
@@ -101,25 +100,25 @@ export const GRUPOS_NAVEGACAO: GrupoMenu[] = [
       {
         id: 'summary',
         rotulo: 'Resumo da reserva',
-        caminho: paths.summary,
+        caminho: caminhos.resumoReserva,
         icone: ClipboardList,
       },
       {
         id: 'passengers',
         rotulo: 'Passageiros',
-        caminho: paths.passengers,
+        caminho: caminhos.passageiros,
         icone: Users,
       },
       {
         id: 'payment',
         rotulo: 'Pagamento',
-        caminho: paths.payment,
+        caminho: caminhos.pagamento,
         icone: CreditCard,
       },
       {
         id: 'confirmation',
         rotulo: 'Confirmação',
-        caminho: paths.confirmation,
+        caminho: caminhos.confirmacao,
         icone: CircleCheck,
       },
     ],
@@ -131,28 +130,42 @@ export const GRUPOS_NAVEGACAO: GrupoMenu[] = [
       {
         id: 'itinerary',
         rotulo: 'Meu roteiro',
-        caminho: paths.itinerary,
+        caminho: caminhos.roteiro,
         icone: CalendarDays,
       },
       {
         id: 'finance',
         rotulo: 'Controle financeiro',
-        caminho: paths.finance,
+        caminho: caminhos.financeiro,
         icone: Wallet,
       },
       {
         id: 'checklist',
         rotulo: 'Checklist da mala',
-        caminho: paths.checklist,
+        caminho: caminhos.listaBagagem,
         icone: Luggage,
       },
       {
         id: 'account',
         rotulo: 'Minha conta',
-        caminho: paths.account,
+        caminho: caminhos.minhaConta,
         icone: UserRound,
       },
     ],
   },
+  {
+    id: 'documentation',
+    titulo: 'Documentação',
+    itens: [
+      {
+        id: 'design-system',
+        rotulo: 'Design System',
+        caminho: caminhos.sistemaDesign,
+        icone: LayoutGrid,
+      },
+    ],
+  },
 ];
-export const navigationItems = GRUPOS_NAVEGACAO.flatMap((g) => g.itens);
+export const itensNavegacao = GRUPOS_NAVEGACAO.filter(
+  (g) => g.id !== 'documentation'
+).flatMap((g) => g.itens);

@@ -1,7 +1,6 @@
 import React from 'react';
 import '../components/Card/Card.css';
 import '../components/Grid/Grid.css';
-import '../styles/botoes.css';
 
 interface Page09Props {
   onMudarTela: (tela: number) => void;

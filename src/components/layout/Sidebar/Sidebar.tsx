@@ -1,55 +1,35 @@
-import type { GrupoMenu } from '../../../types/navegacao.types';
+import type { GrupoMenu } from '../../../tipos/navegacao.tipos';
 import { Logo } from '../Logo/Logo';
 import { GrupoNav } from '../GrupoNav/GrupoNav';
-import './BarraLateral.css';
+import './Sidebar.css';
 
 export interface SideBarProps {
+  id?: string;
   grupos: readonly GrupoMenu[];
   caminhoAtual: string;
-  recolhida: boolean;
   imagemLogo?: string;
   versao?: string;
-  aoNavegar?: () => void;
 }
+
+/** Menu permanente: reutiliza a composição do layout e o visual do menu legado. */
 export function SideBar({
+  id = 'sidebar',
   grupos,
   caminhoAtual,
-  recolhida,
   imagemLogo,
   versao,
-  aoNavegar,
 }: Readonly<SideBarProps>) {
   return (
-    <aside
-      id="barra-lateral"
-      className={`barra-lateral${recolhida ? ' barra-lateral--recolhida' : ''}`}
-    >
-      <div className="barra-lateral__marca">
-        <Logo
-          variante={recolhida ? 'compacta' : 'completa'}
-          imagem={imagemLogo}
-        />
+    <aside id={id} className="sidebar">
+      <div className="sidebar__marca">
+        <Logo imagem={imagemLogo} nome="ROAMLY" descricao="Travel Planner" />
       </div>
-      <nav
-        className="barra-lateral__navegacao"
-        aria-label="Navegação principal"
-        onClick={(event) => {
-          if ((event.target as Element).closest('a')) aoNavegar?.();
-        }}
-      >
+      <nav className="sidebar__navegacao" aria-label="Navegação principal">
         {grupos.map((grupo) => (
-          <GrupoNav
-            key={grupo.id}
-            grupo={grupo}
-            caminhoAtual={caminhoAtual}
-            recolhido={recolhida}
-          />
+          <GrupoNav key={grupo.id} grupo={grupo} caminhoAtual={caminhoAtual} />
         ))}
       </nav>
-      <footer className="barra-lateral__rodape">
-        {!recolhida && 'Roamly · '}
-        {versao}
-      </footer>
+      {versao && <footer className="sidebar__rodape">Roamly · {versao}</footer>}
     </aside>
   );
 }

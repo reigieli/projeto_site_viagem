@@ -16,3 +16,19 @@
   height: 40px;
   border-radius: 8px;
 }
+
+.logo__texto {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.logo__descricao {
+  font-size: 11px;
+  color: var(--cor-menu-texto, var(--cor-texto-secundario));
+  font-weight: 400;
+}
+.logo__texto:has(.logo__descricao) strong {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
