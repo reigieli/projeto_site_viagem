@@ -68,6 +68,14 @@ export function App() {
           {telaAtual === 6 && <Comparacaodepassagens onMudarTela={setTelaAtual} />}
           {telaAtual === 7 && <Hospedagem onMudarTela={setTelaAtual} />}
           {telaAtual === 8 && <Passeios onMudarTela={setTelaAtual} />}
+          {telaAtual === 1 && <Page01 onMudarTela={setTelaAtual} />}
+          {telaAtual === 2 && <Page02 onMudarTela={setTelaAtual} />}
+          {telaAtual === 3 && <Page03 onMudarTela={setTelaAtual} />}
+          {telaAtual === 4 && <Page04 onMudarTela={setTelaAtual} />}
+          {telaAtual === 5 && <Page05 onMudarTela={setTelaAtual} />}
+          {telaAtual === 6 && <Page06 onMudarTela={setTelaAtual} />}
+          {/*{telaAtual === 7 && <Page07 onMudarTela={setTelaAtual} />}*/}
+          {/*{telaAtual === 8 && <Page08 onMudarTela={setTelaAtual} />}*/}
           {telaAtual === 9 && <Page09 onMudarTela={setTelaAtual} />}
           {telaAtual === 10 && <Page10 onMudarTela={setTelaAtual} />}
           {telaAtual === 11 && <Page11 onMudarTela={setTelaAtual} />}
@@ -79,6 +87,8 @@ export function App() {
               <p>Conteúdo em desenvolvimento.</p>
             </div>
           )}
+
+        
         </main>
       </div>
     </div>

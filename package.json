@@ -28,6 +28,19 @@
     "prettier": "^3.10.1",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.72.1",
-    "vite": "^8.3.6"
-  }
+    "vite": "^8.3.8"
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reigieli/projeto_site_viagem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reigieli/projeto_site_viagem/issues"
+  },
+  "homepage": "https://github.com/reigieli/projeto_site_viagem#readme"
 }
